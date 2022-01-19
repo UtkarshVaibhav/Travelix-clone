@@ -1,0 +1,410 @@
+/* //about section */
+.about-us{
+    height: 450px;
+    width: 100%;
+    margin: 0px;
+    background-image: url("https://preview.colorlib.com/theme/travelix/images/about_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: block;
+}
+.about-us-text{
+    font-size: 72px;
+    text-align: center;
+    padding-top: 230px;
+    font-family: sans-serif;
+    font-weight: 800;
+    color: white;
+    display: block;
+}
+
+
+/* //we have section */
+.we-have-section{
+    height: 550px;
+    width: 95.7%;
+    background-color: #f6f9fb;
+    padding: 30px 50px;
+    display: block;  
+}
+.we-have-section-one{
+    height: 500px;
+    width: 45%;
+    float: left;
+    margin: 1% 0.5%;
+    padding: 20px;
+    display: block;
+}
+.we-have-section-one-img{
+    width: 100%;
+    height: 100%;
+}
+.loarn{
+    line-height: 1.9;
+    padding-right: 50px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #929191;
+    padding-bottom: 8%;
+}
+/* Explore button  */
+.explore{
+    width: 220px;
+    height: 50px;
+    color: white;
+    font-size: 15px;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, orange, #8d4fff);
+    transition: background-image 0.5s linear;
+    border-image-slice: 1;
+    margin: 1% 0%;
+    border: none;
+}
+.explore:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right,#8d4fff, orange);
+}
+span{
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* //year .year-statisics section */
+.year-statisics-section{
+    height: 620px;
+    width: 100%;
+    margin: auto;
+}
+.year-statisics-section-top{
+    text-align: center;
+    margin: auto;
+    display: block;
+    
+}
+.year-statisics-section-bottom{
+    width: 70%;
+    height: 450px;
+    margin-left: 15%;
+}
+.year-statisics-section-bottom>div {
+    height: 110px;
+    width: 100%;
+    margin: 5px;
+}
+.year-statisics-section-section{
+    width: 15%;
+    float: left;
+    height: 110px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.year-statisics-section-section1{
+    width: 70%;
+    float: left;
+    height: 110px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.year-statisics-section-img-box{
+    height: 100px;
+    display: grid;
+    grid-row: 1px;
+    padding-top: 2px;
+    padding-left: 50px;
+    float: left;
+}
+.year-statisics-section-line{
+    width: 60%;
+    /* height: 300px; */
+    width: 400%;
+    padding-top: 20px;
+}
+.year-statisics-section-line-text{
+    text-align: center;
+    color: #929191;
+    font-size: 20px;
+}
+.year-statisics-section-line-line{
+    width: 99%;
+    text-align: center;
+    height: 3px;
+    background-color: blue;
+    background-image: linear-gradient(to right, #eee8e8, rgb(12, 12, 12));
+    margin-top: 10px;
+}
+.line2{
+    background-image: linear-gradient(to right, rgb(15, 36, 223), #dbdbdb, #e9e6e6 );
+}
+.line3{
+    background-image: linear-gradient(to right, #ededf1, #f7f4f4,rgb(238, 225, 38), #ece8e8, #e0e0e0 ,#f0f0f0);
+}
+.line4{
+    background-image: linear-gradient(to right, rgb(238, 236, 236), #e9e923 );
+}
+.loarn1{
+    line-height: 1.9;
+    padding: 0px 300px;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #929191;
+}
+.year-statisics-section-section-num{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+.thaland-section{
+    height: 300px;
+    width: 100%;
+    display: block;
+}
+.thaland-section-img-section{
+    margin-top: 10px;
+    margin-left: 10%;
+
+}
+.thaland-section-img{
+    height: 290px;
+    width: 85%;
+    background-image: url("https://preview.colorlib.com/theme/travelix/images/xadd.jpg.pagespeed.ic.GcGK49YYUj.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.thailand-text{
+    font-size: 48px;
+    padding:50px 20px 10px 100px;
+}
+.thaland-section-img>p{
+    padding:0px 0px 0px 100px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.thaland-section-img>button{
+    margin-left: 100px;
+}
+/* .clints-section  */
+.clints-section{
+    width: 84%;
+    /* background-color: gray; */
+    display: grid;
+    padding: 5px 130px;
+    grid-template-columns: repeat(4,24%);
+}
+.clints-section>div{
+    height: 330px;
+    /* background: yellowgreen; */
+    margin: 10px;
+    text-align: center;  
+}
+.clints-section>div>img{
+    padding-top: 70px;
+    /* font-size: 48px; */
+}
+.clints-section>div>h1{
+    font-size: 48px;
+}
+
+
+/* // max- width 1038 */
+@media only screen and (max-width: 1300px ){
+    .we-have-section{
+        height: 670px;
+        width: 96.7%;
+        background-color: #f6f9fb;
+        padding: 20px 20px;
+        display: block;  
+    }
+    .we-have-section-one{
+        height: 550px;
+        width: 42%;
+    }
+    .loarn{
+        line-height: 1.8;
+        padding-right: 5px;
+        padding-bottom: 8%;
+    }
+    .year-statisics-section{
+        height: 690px;
+        width: 100%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 1030px){
+    /* #body{
+       background-color: crimson;
+    } */
+    .we-have-section{
+        height: 1100px;
+        padding: 20px;
+        display: block;
+        background-color: darkslateblue;
+    }
+    .we-have-section-one{
+        height: 500px;
+        width: 100%;
+        padding: 20px 40px;
+    }
+    .loarn{
+        line-height: 1.6;
+        padding-right: 50px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: #929191;
+        padding-bottom: 6%;
+    }
+    .year-statisics-section{
+        height: 650px;
+        width: 100%;
+        margin: auto;
+    }
+    .loarn1{
+        line-height: 1.7;
+        padding: 0px 20px;
+    }
+    .year-statisics-section-line-line{
+        width: 95%;
+        margin-left: 40px;
+    }
+    .year-statisics-section-bottom{
+        width: 70%;
+        height: 450px;
+        margin-left: 10%;
+    }
+    .thaland-section{
+        height: 370px;
+        width: 100%;
+        display: block;
+    }
+    .thaland-section-img-section{
+        margin-top: -30px;
+        /* margin-left: 5%; */
+        background-color: darkorchid;
+    }
+    .thaland-section-img{
+        height: 350px;
+        width: 100%;
+        background-image: url("https://preview.colorlib.com/theme/travelix/images/xadd.jpg.pagespeed.ic.GcGK49YYUj.webp");
+        background-size: cover;
+    }
+    .thaland-section-img-section{
+        margin-top: 10px;
+        margin-left: 5%;
+        margin-right: 5%;
+    
+    }
+    .clints-section{
+        width: 73%;
+        height: 1300px;
+        display: block;
+        padding: 1px 130px;
+    }
+    .clints-section>div{
+        height: 300px;
+        margin:10px 20px;
+        
+    }
+}
+
+@media only screen and (max-width: 768px){
+    /* #body{
+        background-color: rgb(23, 190, 98);
+    } */
+    .about-us-text{
+        font-size: 48px;
+    }
+    .we-have-section{
+        height: 1100px;
+        width: 99%;
+        background-color: #f6f9fb;
+        padding: 1px;
+        display: block;  
+    }
+    .font1{
+        font-size: 28px;
+    }
+    .loarn{
+    line-height: 1.4;
+    padding-bottom: 8%;
+    }
+    .block{
+        display: none;
+    }
+    .loarn1{
+        line-height: 1.4;
+        padding: 0px 100px;
+        font-family: sans-serif;
+        font-weight: 600;
+        text-align: center;
+        color: #929191;
+    }
+    .year-statisics-section-line-line{
+        width: 95%;
+        margin-left: 80px;
+    }
+    .thailand-text{
+        font-size: 32px;
+        padding:50px 20px 10px 50px;
+    }
+    .thaland-section-img>p{
+        padding:0px 0px 0px 50px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .thaland-section-img>button{
+        margin-left: 30px;
+        margin-top: 60px;
+    }
+    .explore{
+        width: 190px;
+        height: 40px;
+    }
+    .clints-section{
+        width: 73%;
+        height: 1300px;
+        display: block;
+        padding: 1px 100px;
+    }
+    .year-statisics-section{
+        height: 750px;
+        width: 100%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 500px){
+    /* #body{
+        background-color: red;
+    } */
+    .about-us-text{
+        font-size: 24px;
+    }
+    .about-us{
+        height: 320px;
+    }
+    .we-have-section{
+        height: 1100px;  
+    }
+    .font1{
+        font-size: 22px;
+    }
+    .loarn{
+        line-height: 1.2;
+        padding-right: 50px;
+    }
+    .clints-section{
+        width: 73%;
+        height: 1300px;
+        display: block;
+        padding: 1px 70px;
+    }
+    .year-statisics-section{
+        height: 800px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
