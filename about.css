@@ -408,3 +408,290 @@ span{
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/* footer section */
+
+/* top footer css start */
+.top-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(49, 18, 75, 255);
+    padding: 5%;
+    color: honeydew;
+    /* flex-direction: column; */
+  }
+  
+  .top-footer > div {
+    width: 22%;
+  }
+  
+  .top-footer > div:first-child > div:first-child {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top-footer > div:first-child p {
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  .top-footer > div:first-child ul {
+    display: flex;
+    justify-content: space-around;
+  
+    padding-left: 0%;
+  }
+  .top-footer > div:first-child ul li i {
+    color: white;
+    border: 1px solid rgba(242, 255, 0, 0.851);
+    padding: 5px;
+    color: whitesmoke;
+    border-radius: 100%;
+  }
+  .top-footer > div:first-child ul li i:hover,.top-footer-tag-container ul li:hover{
+    background: #fa9e1b;
+    cursor: pointer;
+  }
+  
+  .top-footer > div:nth-child(2) > div {
+    padding-left: 5px;
+    display: flex;
+    /* gap: 3px; */
+    align-items: center;
+  }
+  .blog-post-logo-container {
+    width: 30%;
+  }
+  .blog-post-logo-container + div h5:first-child {
+    margin-bottom: 1px;
+    font-weight: 300;
+  }
+  .blog-post-logo-container + div h5:nth-child(2) {
+    margin-top: 10px;
+    color: #8a5035;
+    font-weight: 200;
+    font-size: 1.03em;
+  }
+  .top-footer-tag-container div ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 0%;
+  }
+  .top-footer-tag-container div ul li {
+    width: 30%;
+    margin-bottom: 10px;
+    border: 1px solid #8a5035;
+    padding: 5%;
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+  .top-footer-tag-container div ul li:nth-child(odd) {
+    margin-right: 5px;
+  }
+  .top-footer-tag-container div ul li a {
+    color: whitesmoke;
+  }
+  
+  
+  
+  
+  .contact-info-item {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  .contact-info-icon {
+    width: 12%;
+  }
+  .contact-info-icon img {
+    width: 70%;
+  }
+  /* top footer css end */
+  
+  /* contact info or botxtom footer start css */
+  .copyright,.copyright ul li a,.copyright ul{
+      display: flex;
+      justify-content: space-evenly;
+      background-color: #1f0733;
+      color: #3d274e;
+      align-items: center;
+      font-weight: 500;
+      font-size: 0.9rem;
+      
+  
+  }
+  .copyright ul li a:hover{
+      color: whitesmoke;
+  }
+  .copyright p{
+      width: 30%;
+      letter-spacing: 1px;
+  }
+  .copyright p span{
+      color: #0d49a7;
+  }
+  .copyright p span:hover{
+      color: #063580;
+  }
+  .copyright ul{
+    width: 40%;
+  }
+  
+  /* contact info or botxtom footer end css */
+  
+  
+  /* media query  suraj start*/
+  @media only screen and (max-width: 1100px) {
+    /* client page media query start */
+    .client > h1{
+      font-size: 1.2rem;
+    }
+    #c3{
+      display: none;
+    }
+    .test-item {
+      width: 35%;
+     }
+     /* client page media query end */
+  
+    /* top footer media qury start */
+    .top-footer {
+      flex-direction: column;
+    }
+    
+    .top-footer > div {
+      width: 70%;
+      margin: auto;
+      margin-bottom: 30px;
+     }
+  
+    .top-footer > div:first-child ul {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .top-footer > div:first-child ul li {
+      margin-right:15px;
+    }
+    .blog-post-logo-container{
+      margin-right: 0%;
+      width: 25%;
+    }
+   
+  
+    .top-footer-tag-container div ul li {
+      width: 30%;
+      padding: 2%;
+      font-size: 1em;
+      /* margin-right: 20px; */
+    }
+    .top-footer-content-info > h3{
+      margin-bottom: 50px;
+      font-size: 1.3em;
+    }
+    /* top footer media qury end */
+    
+    
+    .trending-hotels-card {
+      width: 30%;
+      /* border: 1px solid green; */
+      
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    /* bottom footer or copyright media query start */
+    .copyright {
+      flex-direction: column-reverse;
+    }
+    .copyright ul{
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+      align-items: flex-start;
+      width: 90%;
+      margin: auto;
+      margin-bottom: 5px;
+      margin-top: 40px;
+    }
+    .copyright ul li a{
+      margin-bottom: 15px;
+    } 
+    .copyright p{
+      width: 85%;
+      font-size: 0.8rem;
+    }
+    /* bottom footer or copyright media query end */
+  
+    /* client page media query start */
+    .client{
+      /* border: 1px solid red; */
+      width: 90%;
+      margin: auto;
+    }
+    .test_slide_container {
+      flex-direction: column;
+    }
+    .test-item-img-container > img {
+      width: 190%;
+      height: 460px;
+      margin: auto;
+      /* border: 1px solid green; */
+    }
+    .test-item {
+      margin-left: 20%;
+      margin-right: 50%; 
+      margin-bottom: 70px;
+     }
+     .test-icon {
+      top: 0;
+      width: 35%;
+    }
+    .test-quote{
+      width:191%;
+      height:53.5%
+    }
+     .left-button,.right-button{
+       display: none;
+     }
+    /* client page media query end */
+  
+    /* trending page media query start */
+    .trending-hotels-card {
+      width: 45%;
+      /* border: 1px solid red; */
+      
+    }
+    .trending-description h4 {
+      font-size: 0.7em;
+    }
+    .trending-description h5 {
+      font-size: 0.7em;
+    }
+  
+    .container-bg{
+      background: none;
+      width: 70%;
+      padding: 0;
+      height: 500px;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+    .contact_form_container{
+      left:0;
+    }
+  }
+  /* footer seaction ended */
+
