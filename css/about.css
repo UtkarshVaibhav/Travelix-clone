@@ -295,15 +295,20 @@ span{
 
 /* //year .year-statisics section */
 .year-statisics-section{
-    height: 620px;
+    height: 650px;
+    margin-top: 30px;
     width: 100%;
     margin: auto;
+    background: #fa9e1b;
 }
 .year-statisics-section-top{
     text-align: center;
-    margin: auto;
+    /* margin: auto; */
+    width: 100%;
     display: block;
-    
+    padding: 20px 1px;
+    /* height: 300px; */
+    background: #8a5035;
 }
 .year-statisics-section-bottom{
     width: 70%;
