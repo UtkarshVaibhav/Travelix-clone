@@ -1,622 +1,180 @@
-/* nav bar css strat */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-a{
-  text-decoration: none;
-  color: white;
-  margin-left: 10px;
-}
-ul{
-  list-style-type: none;
-  display: flex;
-  gap: 10px;
-}
-i:hover,.login:hover,.register:hover{
-  color: rgb(233, 114, 71);
-}
-/* NAV-----------------------------------------------------BAR */
-.top-nav-bar{
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  background-color: rgb(54, 1, 92);
-  color: white;
-  font-size: 11px;
-  position: fixed;
-  width: 100%;
-  padding: 10px;
-  min-height: 4vh;
-  z-index: 300;
-}
-.bottom-nav-bar
-{
-  background-color: rgb(66, 11, 105);
-  opacity: 0.8;
-  position: fixed;
-  top: 33px;
-  width: 100%;
-  min-height: 20vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-  z-index: 300;
-}
-.logo img{
-  margin-right: 10px;
-  cursor: pointer;
-}
-.logo{
-  color: white;
-  font-size: 30px;
-  font-weight:900;
-  cursor: pointer;
-}
-.nav-bar{
-  font-size: smaller;
-}
-.nav-bar ul{
-  display: flex;
-  gap: 30px;
-}
-li>img{
-  display: none;
-}
-.cross-mark{
-  display: none;
-}
-.nav-bar li>a:hover{
-border-bottom: 2px solid;
-border-image: linear-gradient(to right, orange, #8d4fff);
-border-image-slice: 1;
-padding-bottom: 10px;
-}
-.search i{
-  transform: scaleX(-1);
-  margin-right: 5px;
-  cursor: pointer;
-}
-.search-bar{
-  height: 30px;
-  width: 250px;
-  position: absolute;
-  top: 100px;
-  right:65px;
-  /* display: none; */
-  transform: translateX(800%);
-  transition: transform 0.4s ease-in;
-  font-size: 17px;
-}
-.search-active{
-/* display: block; */
-transform: translateX(0%);
-z-index: 100;
-opacity: 1;
-width: 200px;
-}
-.burgur{
-  cursor: pointer;
-  display: none;
-}
-.burgur div{
-  width: 20px;
-  height: 3px;
-  border-radius: 10px;
-  background-color: white;
-  margin: 3px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <div class="nav-container">
+        <div class="top-nav-bar">
+            <div class="left-part">
+                    <ul>
+                        <li class="phone">+45 345 3324 56789</li>
+                        <li class="icon"><a href=""><i class="fab fa-pinterest"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+            </div>
+            <div class="right-part">
+                    <ul>
+                        <li><a href="" class="login">LOGIN</a></li>
+                        <li><a href="" class="register"> REGISTER</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="bottom-nav-bar">
+            <div class="logo">
+                <img src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA" alt="">TRAVELIX
+            </div>
+            <div class="nav-bar">
+                <ul class="upper-target-ul">
+                    <div class="cross-mark"><i class="fas fa-times"></i></div>
+                    <li><img src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA" alt=""></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Abouts-us.html">ABOUT US</a> </li>
+                    <li><a href="offers.html">OFFERS</a> </li>
+                    <li><a href="news.html">NEWS</a> </li>
+                    <li><a href="contact.html">CONTACT</a> </li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="search-bar" type="text">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="burgur">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <nav></nav> end  -->
 
-/* ____________________________________RESPONSIVE__________________________________________________ */
-
-
-@media screen and (max-width:768px)
-{ 
-  body{
-      overflow-x: hidden;
-  }
-  .top-nav-bar{
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-      background-color: rgb(54, 1, 92);
-      color: white;
-      font-size: 11px;
-      position: fixed;
-      width: 100%;
-      padding: 10px;
-      min-height: 4vh;
-      z-index: 300;
-  }
-  li>img{
-      display: inline-block;
-  }
-  .upper-target-ul{
-      background-color: red;
-      position: absolute;
-      top:0;
-      left:0;
-      height: 100vh;
-      width: 100vw;
-      background-image: linear-gradient(to right, orange, #8d4fff);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Dancing Script', cursive;
-      font-size:30px;
-      transform: translateX(600%);
-      transition: transform 0.6s ease-in;
-      z-index: 100;
-  }
-  .nav-bar li>a:hover{
-      border-bottom: 0px solid;
-      border-image: linear-gradient(to right, orange, #8d4fff);
-      border-image-slice: 1;
-      text-decoration: line-through;
-      padding-bottom: 10px;
-  }
-  .burgur{
-      display: block;
-      cursor: pointer;
-      z-index: 200;
-  }
-  .cross-mark{
-      display: block;
-      position: absolute;
-      top: 50px;
-      right: 30px;
-      cursor: pointer;
-  }
-  .nav-active{
-      transform: translateX(0%);
-      z-index: 800;
-      opacity: 1;
-      width: 100%;
-  }
-}
-@media screen and (max-width:486px)
-{ 
-  .top-nav-bar{
-      /* display: none; */
-      font-size: 7px;
-      height: 35px;
-  }
-  .bottom-nav-bar{
-      width: 100vw;
-  }
-  
-  .logo>img{
-      height: 20px;
-  }
-  .logo{
-      font-size: 20px;
-  }
-  body{
-      overflow-x: hidden;
-  }
-  .nav-active{
-      transform: translateX(0%);
-      z-index: 400;
-      opacity: 1;
-      width: 100vw;
-      height: 100vh;
-  }
-}
-
-/* navbar css end */
-
-
-.contact-us{
-    height: 450px;
-    width: 100%;
-    margin: 0px;
-    background-image: url("https://preview.colorlib.com/theme/travelix/images/contact_background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
-    display: block;
-    margin-bottom: 100px;
-}
-.contact-us-text{
-    font-size: 72px;
-    text-align: center;
-    padding-top: 230px;
-    font-family: sans-serif;
-    font-weight: 800;
-    color: white;
-    display: block;
-}
+    <hr>
+    <div class="contact-us">
+        <div class="contact-us-text">CONTACT</div>
+    </div>
 
 
 
-.container-bg {
-  width: 80%;
-  height:730px;
-  margin: auto;
-  /* background-color: linear-gradient(to top right, #fa9e1b, #8d4fff); */
-  /* background: url("https://preview.colorlib.com/theme/travelix/images/xcontact.png.pagespeed.ic.qi--ZwSUbp.webp"); */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  /* position: relative; */
-  /* margin-bottom: -35px; */
-  text-align: center;
-}
+    <div class="container-bg">
+        <div class="contact_form_container">
+            <div class="contact_title">get in touch</div>
+            <form action="#" id="contact_form" class="contact_form">
+                <div>
+                    <input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Name"
+                        required="" data-error="Name is required.">
+                    <input type="text" id="contact_form_email" class="contact_form_email input_field"
+                        placeholder="E-mail" required="" data-error="Email is required.">
+                </div>
 
-.contact_form_container {
-  /* position: absolute;  */
-  left: 50%; 
-  height: 650px;
-   top: 5%; 
-   bottom: 15%;
-  background: linear-gradient(to top right, #fa9e1b, #8d4fff);
-  padding: 3%;
-  opacity: 1;
-  color: #fff;
-}
-.contact_title {
-    font-size: 32px;
-    padding-top: 50px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-  }
-  
-  .contact_form {
-    margin-top: 52px;
-    font-size: 0;
-    padding: 60px;
-  }
-  
-  .contact_form > div {
-    display: flex;
-  }
-  
-  .contact_form_name {
-    width: calc((100% - 30px) / 2);
-    margin-right: 30px;
-    font-size: 22px;
-  }
-  
-  .contact_form_email {
-    width: calc((100% - 40px) / 2);
-  }
-  
-  .contact_form_subject {
-    width: 100%;
-    margin-top: 11px;
-  }
-  
-  .contact_form_subject {
-    width: 100%;
-    margin-top: 11px;
-  }
-  
-  .contact_form_message {
-    height: 126px;
-    width: 100%;
-    border: none;
-    outline: none;
-    margin-top: 19px;
-    background: transparent;
-    font-size: 22px;
-    font-weight: 400;
-    color: #fff;
-    border-bottom: solid 2px #e1e1e1;
-    padding-top: 11px;
-  }
-  .contact_form_email::placeholder,
-  .contact_form_name::placeholder,
-  .contact_form_message::placeholder,
-  .contact_form_subject::placeholder {
-    color: #fff;
-    font-size: 22px;
-    font-weight: 500;
-  }
-  
-  .form_submit_button {
-    font-size: 13px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    line-height: 53px;
-    padding-left: 29px;
-    padding-right: 29px;
-    background: #31124b;
-    margin-top: 37px;
-    cursor: pointer;
-    border-radius: 27px;
-    border: none;
-  }
-  
-  .button span {
-    display: inline-block;
-    vertical-align: middle;
-    width: 5.75px;
-    height: 5.63px;
-    background: #fff;
-    border-radius: 50%;
-    margin-right: 2px;
-  }
-  
-  .button span:first-child {
-    margin-left: 10px;
-  }
-  
-  .button :nth-child(2) {
-    background: rgb(199, 197, 197);
-  }
-  
-  .button :nth-child(3) {
-    background: rgb(164, 161, 161);
-  }
-  
-  .input_field {
-    height: 48px;
-    font-size: 12px;
-    font-weight: 400;
-    border: none;
-    outline: none;
-    background: 0;
-    color: #fff;
-    border-bottom: solid 2px #e1e1e1;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-  }
+                <input type="text" id="contact_form_subject" class="contact_form_subject input_field"
+                    placeholder="Subject" required="" data-error="Subject is required.">
+                <textarea id="contact_form_message" class="text_field contact_form_message" name="message" rows="4"
+                    placeholder="Message" required="" data-error="Please, write us a message."></textarea>
+                <button type="submit" id="form_submit_button" class="form_submit_button button">send message
+                        <span></span><span></span><span></span>
+                </button>
+            </form>
+        </div>
+    </div>
 
 
-  /* //bag image section */
-  .bag-img-section{
-    width: 80%;
-    height:600px;
-    margin-left: 10%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .bag-img-section-img{
-    width: 36%;
-    height: 580px;
-    padding: 10px;
-  }
-  .bag-img-section-loarn{
-    width: 34%;
-    /* background-color: lightseagreen; */
-    height: 580px;
-    /* padding: 10px; */
-    padding-top: 80px;
-    
-  }
-  .line-higest{
-      line-height: 2;
-      font-weight: bold;
-  }
-  .bag-img-section-address{
-    width: 25%;
-    height: 580px;
-    padding-top: 200px;
-  }
-  .top-footer {
-    display: flex;
-    padding: 2%;
-    /* flex-direction: column; */
-  }
-  
-  .top-footer > div:first-child > div:first-child {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    padding-left: 0px;
-  }
-  
-  .top-footer > div:first-child p {
-    font-weight: 500;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-  }
-  .top-footer > div:first-child ul {
-    display: flex;
-    justify-content: space-around; 
-    padding-left: 0%;
-  }
- .social{
-   height: 200px;
-   width: 100%;
-   padding-left: 10px;
- }
- .social>div{
-   height: 50px;
-   width: 50px;
-   border-radius: 50%;
-   margin: 20px 10px;
-   float: left;
-   /* border: 2px solid rgb(245, 248, 80); */
- }
- .social-logo{
-   /* padding: 5px; */
-   height: 100%;
-   width: 100%;
-   border-radius: 50%;
-   
- }
- .social-logo:hover{
-  height: 110%;
-  width: 110%;
-  border-radius: 50%;
- }
+     <!-- bag image section -->
+        <div class="bag-img-section">
+            <div class="bag-img-section-img">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xman.png.pagespeed.ic.EFVcLSPoud.webp" alt="">
+            </div>
+            <div class="bag-img-section-loarn">
+                <div class="top-footer">
+                    <div>
+                        <div class="bag-img-text">
+                            <div>
+                                <img src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA"
+                                alt="LOGO" srcset="">
+                            </div>
+                            
+                            <h1>TRAVELIX</h1>
+                        </div>
+                        <p class="line-higest">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer eleme ntum orci vehicula iaculis consequat nisl. Nunc et suscipit urna pretium.</div>
+                </div>
+                <div class="social">
+                    <div>
+                        <a href="#"><img class="social-logo" src="https://static01.nyt.com/images/2014/08/10/magazine/10wmt/10wmt-articleLarge-v4.jpg?quality=75&auto=webp&disable=upscale" alt="logo"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img class="social-logo" src="https://www.nzqba.co.nz/wp-content/uploads/2021/09/LinkedIn-logo.png" alt="logo"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img class="social-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="logo"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img class="social-logo" src="https://www.kindpng.com/picc/m/146-1461679_slack-transparent-slack-logo-hd-png-download.png" alt="logo"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img class="social-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAk1BMVEX////EGgDBAADDAADuxL/89vbDEgDDFADxzsnafXTDCwDvysb//fz++fj78O767Or02dbXdWz45uThop/IMyXMRDjVbWTNSj7dioLps63svrnQVkvz1tL239zHKRfquLPinZbmrKbOWVPbhX7TZFnflY7MRzvHIwvSYVblqKLKOizILhvRYlzgkorQVEjPVEnVdnLUh+x/AAAKYUlEQVR4nO1da3eiOhSVRBONiEpVrFalrdZX7dz//+su1D6sFdwkJyBd7C93Zt1Zxm2S8845tVqFChUqVKhQoUKFChUqVLghuA2v2+36zXYz+o/nNdyivxAd3NnD/bj/Otwrzj7B5T547R8WPb/ob2cKfzJ+G6iIkVJCOqeQQsWM5W4a1r2iv6YmvPuWE3E7Y3YOGfN0nieNor9uRrizQ8CYSid3QjP6JabhrOhvjaN3GEZ7B7L7hGA8WJWCZGM75JnpfZNcFP39r6HXYkyP3hfJ8S3L1/Y0khqm4Hz0UDSRBNQDpoz5xVD8qVk0mQtoD4yO5xlHNu0VTegMvSkhvyPH0S3dR6/Pac7nKZhadYom9olHh5Pze+c4qBdN7R2zgKG2S1ZItrwBm/XOwgH9BlOTgvl1N+YKMBWS9Qs1yutWN/AIvi7QWh1bu4GnEGxbED/vyfIJ/QJrFaI3/HVeBCOKwwJkal3DRZJCqAjiit9/AcrJ/TJus15BxRmfvzwtR6Pl08s++gscAXiHUO18CYbZTqhi6nXV9r2PEKLr+Q/hyGE8A0nJ7/MkOM5CMPJq++0LosJ9GIsM/pZkOVJ8zkBQsX8pkYn2huOfxcIbJCjY8oozO8vgl+SlGPEjKlkAOOuzKSy18jmouJBR6hH7yPoadb9YDob4PUwwg+vjtsBtlNy60mijv7bkd1k+dyEwA0IKy8ENH1VhSmQMl/l77HCItVUbtTEHTTW2y2xIdqbY8WBTG8w+sQTPKH/R+aH72C6yMTmvL6xAKcM3ehlelKK15EYTJRjoprBH0AqSW5I2HugNqJ2+LNhA10DsCGmd4BUUdo6Bt9oJIBPOzlV8xAhKbpQ56jrQQTFbJGFpUBOamo4P0A8pBvTVKhvMA+At04Uwu5c9U5A6xQQ8o3Pz33aKXUXiwE1nDp5RgtSmD8lsEZivdArQJ6SRcVvsnIKuGYYZZq3JOU2OIUCsX6rFjsBsDTIXHJOnbEWzWoweqOuHVAuOIGHD6QLh0KmhETNH+NCt4H2q9drgFr5QLVirtSCKrEu0HKagHEYYQsFEm7l5ccQDJkhpFRR0E6Wg2UTs2hP7pZg45QeKtbBb78g9bb59B+nENcWiY4whJzaFMWeNQgO7YPCJ3BLGvP2B+UpgjJs+sIBdf2buCoPanofmnH4C89eUscIAbW7yQ1qreVA8Q0rTEPgKlKQE9+Ec4DE1zUa9gIfUQvALk6bq1WwV+JBaqJPE1pZrMw8DPKSOslHRM4AiJ4bH9A07pOKNiNQPLKGLqIx8KA/MVJjL7EvYgsfUJLyHprTtFEmAfqmR0u+DhSA2guzwCTIyNtDaM2kn3WXfMfXBQyotZBFiDMH4kP4KYCifNEJzihboe+tHwFqoKF0S0jrBHVi7oO8kgiabFZstBpiy1NeIHpiOcbIVB+EAb4l+JLoHV5tZKo7AwlGRztcNudXREjYbdncMMJvgcN2nfKjZbY0hajRqr49aNNYYNtA9DDUXeCoLQ11h2tnBpbtFM9T087FQ0C0wFJplZl34ZWjRDOVeL8SA2t3FM3Q0c1CgA3oLDLkeQ9SzuAGGTM8/Be3em2CoZ9SUiaFegh022iqG2qgYVgyv4e8zDP88w7+vLcrEUC/HDodpboChntWGPgK6AYaalne3NAyl5jOdEnnAA73yNjjkXThD3SR7B01bFM5QjTQXeC1LNJHplhGgybXiGeqWEWBvV26BoW6KFFaIhWdmdMsGZ/A9tNTLAWQo97r1ie4eVBe2GnKAdqPBWx2w5ouoZP43wIIlgxJzuG5PVx9dAVqpoJ+CRr0LO4V78DMBg/pkNAcrLb2Pn4LluwZLrMGuMdqlAunA0ntGdwQ8JvqlAqlwwdpEk+ey6EW0o/LBYhNNB/8I7OEK/ZOgIxZY84GdUdkg6F6oDRWrU2C1IIYlZ2gzDMOC+cuAnq+Zvs0Fn+bpJvDS14YkqRwYPpoBX8hywpfjn8By0MYiADymwkJ7Kqx+lps+IPdAD4qRd2zGCpbk3Hgh7FnHFevXD+9iPN63Zy4q28GXwKExQ9DRT9cXbcZjvE9Cmi8Pky5AE7OnKJ7kg1HT1MD66c8UTwfiw1b7mn6BbGISRXwH2k5p8a5fB0Ew5ixTTT2sXomky0EDs/BTQwmXjrpUqTNloK5NRF0O0OfqKWI76TJzljRTBkuaEAWIfNA2TXHTksWV4pfnrRwQhvpBtjNgjUaclF5/aQJZsdFvIYVlhciezIFpNpZci5yucthvpQa1NJMOEUF4E5Nd0WtKlb38PKqNfLeQYBOvmg3q5zZiW0jQG+4LYOPSxNecgGHE3r4tWw8TpJQvdbBT46gkDwMx/dT66/eBOrUq2iAtGF9P0k+QcSv4IsO/Jn+Zi2W8pbxsbWLfWR47sLlQ9IKu0dcHwML9BEsYzUS+dyWEOhhKTt70+mASnsVzrc+oyU3/INAdYOdUXUqT9OKhJFjk7BlThTbe5aJNzRKqd3p3AUfa2EIP5KVjJVECKkWe6JT64znRgChbaXWsT3NaA1wvVBRDvsjl6CfgZskpwdPuxnwbbbRJ/gCcigpTPmRhuo2XhRkR0Mb6qc1TZzuzgZB255SgwxFSm1F3gmzTos4+2lLhxycGaAx8k2ZzLPUpJotqInTXaI3NPu22YBMCLoC9WZMyn+ihr4MFT8mvu0M9caMGOQzRa6PiXrJNcmwKHSXxE8LJZUhwE9ZoioWJZwp/CfANa6M7zjHBlTZb3ydJHFTzfEPI3EZZL/CxfpINtpevjgv2SPomKHKc1Q3fxXeOcnQxBwM3h/kgaNOU+Y2myrABcQ5muZ39OK4d/7GfaQ/V3E5lWSJ682ziXjEmg//G4XYyeQzH//1zWIbhjhH4W+6zVrvDrEpbCvWRBuYq66xVtixiXq6B6ZUR0uaYrjSsskxKNYBQ1oZ0XUNb2h/LHV3BXYGDubtGfhAEyUbWbe1UrDRGO2eBkjnM5UxHb2hxGyPjPWcteAnuCh93m5XgPtc5zsnw34jCoOegG1xjjMXeDsc8B1VfQSd0bFxH6ZCXPOrDG3OzIOFFcEvvjfTgHaDUSzbkNYobRCMcZPMYEIqF68Of6EymjHYjpbI+pzorZofYFySkaG84rj6arTmY8oVgO46vBbc5DiJvF5w7cO3u3oTtdgHdxfMu9ufTTqyIPf6nq89/lHM7qv8Mnfa2v49DF5wpIYQ8IvrTMaDBd8/3Dy7QfF2ytwKdxOvw25OwtZwGweCIIJiOnrf15tfZA14eCDbKKeBthM4Rv/9HH7CHFE8qmS4DsHJ5xYP7GzJUswFtLsD4clJSkmAdchxbtlVrYhkd7D2lY9CNpmjAbYtLyxCv1iktQ7TjT4kZgjWsZWaIlQeXmmFtC7jP5WZYq191pcrOsNbdXTupZWcY975N38byM6z5o1SOf4BhrdYbpUTs/gTDuOpdMX65noFqonrxaI6HcU2KEvJIVEoRsWbcKahswQr8Zth6fdk7KgLfD/6NWmG9l3thjXW4De8djZJ6vhUqVKhQoUKFChUqVKhQCvwPfjygzJFGpKsAAAAASUVORK5CYII=" alt="logo"></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bag-img-section-address">
+                <div class="top-footer-content-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img src="https://preview.colorlib.com/theme/travelix/images/placeholder.svg" alt="icon">
+                        </div>
+                        <div class="contact_info_text">4127 Raoul Wallenber 45b-c Gibraltar</div>
+                    </div>
+            
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img src="https://preview.colorlib.com/theme/travelix/images/phone-call.svg" alt="icon">
+                        </div>
+                        <div class="contact_info_text">2556-808-8613</div>
+                    </div>
+            
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img src="https://preview.colorlib.com/theme/travelix/images/message.svg" alt="icon">
+                        </div>
+                        <div class="contact_info_text">contactme@gmail.com</div>
+                    </div>
+            
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img src="https://preview.colorlib.com/theme/travelix/images/planet-earth.svg" alt="icon">
+                        </div>
+                        <div class="contact_info_text">www.colorlib.com</div>
+                    </div>
+            
+                </div>
+            </div>
+            </div>
+        </div>
 
 
-  .contact-info-item {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-    padding-left: 20px;
-  }
-  .contact-info-icon {
-    width: 12%;
-  }
-  .contact-info-icon img {
-    width: 70%;
-  }
+        <!-- map section -->
+        <div class="map-add-section">
+                <!-- Google Map Copied Code -->
+                <iframe class="map" src=
+                    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.4051603706222!3d28.50292593193056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce626851f7009%3A0x621185133cfd1ad1!2sGeeksforGeeks!5e0!3m2!1sen!2sin!4v1585040658255!5m2!1sen!2sin"
+                        frameborder="0"
+                        style="border:0;"
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex=1>
+                </iframe>
+        </div>
+
+<hr>
 
 
-
-  /* //map adding */
-  .map-add-section{
-    margin-top: -50px;
-    height: 550px;
-    width: 100%;
-    position: absolute;
-  }
-  .map{
-    height: 550px;
-    width: 100%;
-    position: absolute;
-  }
-
-  @media only screen and (max-width: 1400px){
-    #body{
-      background: rgb(0, 255, 242);
-    }
-    .social>div{
-      margin: 20px 5px;
-    }
-  }
-
-@media only screen and (max-width: 1300px ){
-    #body{
-      background: #fa9e1b;
-    }
-    .social{
-      height: 200px;
-      width: 100%;
-      padding-left: 10px;
-    }
-    .bag-img-section{
-      width: 90%;
-      padding-left: 3px;
-      margin-left: 5%;
-    }
-    .bag-img-section-img{
-      width: 35%;
-    }
-    .bag-img-section-loarn{
-      width: 40%;
-      margin-left: 30px;
-      
-    }
-    .bag-img-section-address{
-      width: 18%;
-    }
-  }
-@media only screen and (max-width: 1030px){
-    #body{
-      background: rgb(0, 38, 255);
-    }
-    .bag-img-section{
-      width: 80%;
-      height:1500px;
-      margin-left: 10%;
-      display: block;
-      /* flex-wrap: wrap; */
-    }
-    .bag-img-section-img{
-      width: 80%;
-      padding-left: 20%;
-    }
-    .bag-img-section-loarn{
-      width: 90%;
-      height: 350px;
-      /* padding: 10px; */
-      padding-top: 20px;
-      
-    }
-    .bag-img-section-address{
-      width: 90%;
-      /* height: 580px; */
-      height: 300px;
-      padding-left: 20px;
-      margin-top: -100px;
-    }
-}
-@media only screen and (max-width: 768px){
-    #body{
-        background-color: rgb(23, 190, 98);
-    }
-    .contact-us-text{
-        font-size: 48px;
-    }
-    .contact_form {
-      margin-top: 30px;
-      padding: 2px;
-    }
-    .container-bg {
-      width: 95%;
-    }
-    .bag-img-section-img{
-      width: 80%;
-      padding-left: 15%;
-    }
-}
-@media only screen and (max-width: 600px){
-    #body{
-        background-color: red;
-    }
-    
-    .contact-us-text{
-        font-size: 24px;
-    }
-    .contact-us{
-        height: 400px;
-        margin-bottom: 30px;
-    }
-    .contact_form {
-      margin-top: 30px;
-      padding: 2px;
-    }
-    .line-higest{
-      padding-left: 60px;
-  }
-  .contact_form_container {
-    /* position: absolute;  */
-     
-    height: 550px;
-    
-  }
-  .bag-img-section{
-    width: 80%;
-    height:1400px;
-    margin-left: 10%;
-    display: block;
-    /* flex-wrap: wrap; */
-  }
-  .bag-img-section-img{
-    width: 80%;
-    padding-left: 5%;
-  }
-  .container-bg {
-    height:600px;
-  }
-}
-@media only screen and (max-width: 500px){
-  #body{
-    background: #c61bfa;
-  }
-
-  .bag-img-section-img{
-    width: 80%;
-    padding-left: 2%;
-  }
-}
+        <script src="javascript/contact.js"></script>
+</body>
+</html>
