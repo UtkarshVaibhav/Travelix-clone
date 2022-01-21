@@ -4,45 +4,774 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under procces</title>
-    <style>
-        .maintance{
-            height: 500px;
-            width: 100%;
-            background-image: url('https://www.seedprod.com/wp-content/uploads/2020/09/maintenance-mode-page-templates.jpg');
-            background-position: center;
-            background-size: auto;
-            background-repeat: no-repeat;
-        }
-        #div1 {
-            width: 220px;
-            height: 200px;
-            position:absolute;
-            animation: mymove 4s infinite;
-            background-image: linear-gradient(to bottom, rgb(238, 236, 236), #e9e923, rgb(0,50,90));
-            
-            border-radius: 50%;
-            padding-top: 50px;
-            padding-left: 30px;
-            text-align: center;
-        }
-
-    @keyframes mymove {
-        from {left: 0px;}
-        to {left: 41%;};   
-    }
-    </style>
+    <title>Travelix</title>
+    <script src="https://kit.fontawesome.com/c14fc2b87b.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/052942d93d.js" crossorigin="anonymous"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter&family=Dancing+Script:wght@700&family=El+Messiri&family=Inspiration&family=Lato:wght@300&family=Montserrat:ital@1&family=Roboto:wght@400;700&family=Sacramento&family=Twinkle+Star&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div id="div1"></div>
-    <div class="maintance"> </div>
-    <!-- <img src="https://www.seedprod.com/wp-content/uploads/2020/09/maintenance-mode-page-templates.jpg" alt=""> -->
-    <script>
-        const myTimeout = setTimeout(myGreeting, 3000);
+    <div class="nav-container">
+        <div class="top-nav-bar">
+            <div class="left-part">
+                    <ul>
+                        <li class="phone">+45 345 3324 56789</li>
+                        <li class="icon"><a href=""><i class="fab fa-pinterest"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+            </div>
+            <div class="right-part">
+                    <ul>
+                        <li><a href="" class="login">LOGIN</a></li>
+                        <li><a href="" class="register"> REGISTER</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="bottom-nav-bar">
+            <div class="logo">
+                <img src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA" alt="">TRAVELIX
+            </div>
+            <div class="nav-bar">
+                <ul class="upper-target-ul">
+                    <div class="cross-mark"><i class="fas fa-times"></i></div>
+                    <li><img src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA" alt=""></li>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT US</a> </li>
+                    <li><a href="">OFFERS</a> </li>
+                    <li><a href="">NEWS</a> </li>
+                    <li><a href="">CONTACT</a> </li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="search-bar" type="text">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="burgur">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="slide-container">
+        <div class="slide fade">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xhome_slider.jpg.pagespeed.ic.lLDKIDdpoS.webp" alt="">
+            <div class="caption">DISCOVER <br> <span>the world1 <br></span> 
+                <button class="explore">EXPLORE NOW ...</button>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xhome_slider.jpg.pagespeed.ic.lLDKIDdpoS.webp" alt="">
+            <div class="caption">DISCOVER <br> <span>the world2 <br></span> 
+                <button class="explore">EXPLORE NOW ...</button>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xhome_slider.jpg.pagespeed.ic.lLDKIDdpoS.webp" alt="">
+            <div class="caption">DISCOVER <br> <span>the world3 <br></span> 
+                <button class="explore">EXPLORE NOW ...</button>
+            </div>
+        </div>
+        <div class="click-number">        
+            <span class="number one" onclick="function_number(1)">01.</span>
+            <span class="number two" onclick="function_number(2)">02.</span>
+            <span class="number three" onclick="function_number(3)">03.</span>
+        </div>
+        <span class="arrow prev" onclick="controller(-1)">&#10094</span>
+        <span class="arrow next" onclick="controller(1)">&#10095</span>
+    </div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="options-form">
+        <div class="upper-options">
+                <button class="first-button"><i class="fas fa-hotel"></i><span>HOTELS</span></button>
+                <button><i class="fas fa-car"></i><span>CAR RENTALS</span></button>
+                <button><i class="fas fa-plane-departure"></i><span>FLIGHTS</span></button>
+                <button><i class="fas fa-umbrella-beach"></i><span>TRIPS</span></button>
+                <button><i class="fas fa-ship"></i><span>CRUISES</span></button>
+                <button class="last-button"><i class="fas fa-swimmer"></i><span>ACTIVITIES</span></button>
+        </div>
+        <div class="form-div">
+            <form class="destination-form">
+                <div class="destination-box1">                
+                    <label for="destination">DESTINATION</label><br>
+                    <input type="text">
+                </div>
+                <div class="destination-box2">
+                    <label for="checkin">CHECK IN</label><br>
+                    <input type="date">
+                </div>
+                <div class="destination-box3">
+                    <label for="checkout">CHECK OUT</label><br>
+                    <input type="date">
+                </div>
+                <div class="destination-box4">
+                    <label for="adultNumber">ADULT</label><br>
+                    <select name="" id="adults">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                    </select>
+                </div>
+                <div class="destination-box5">
+                    <label for="childrenNumber">CHILDREN</label><br>
+                    <select name="" id="children">
+                            <option value="1">0</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                    </select>
+                </div>
+                <div class="destination-box6">
+                    <input type="submit" value="SEARCH . . .">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="options-and-form-box">
+        <div class="options-div">
+            <button><i class="fas fa-hotel"><span>HOTELS</span></i></button>
+            <button><i class="fas fa-car"><span>CAR RENTALS</span></i></button>
+            <button><i class="fas fa-plane-departure"><span>FLIGHTS</span></i></button>
+            <button><i class="fas fa-umbrella-beach"><span>TRIPS</span></i></button>
+            <button><i class="fas fa-ship"><span>CRUISES</span></i></button>
+            <button><i class="fas fa-swimmer"><span>ACTIVITIES</span></i></button>
+        </div>
+        <div class="forms-div">
+            <div class="box1">
+                <label for="destination">DESTINATION</label><br>
+                <input type="text">
+            </div>
+            <div class="box2">
+                <label for="checkin">CHECK IN</label><br>
+                <input type="text" placeholder="YYYY-MM-DD">
+            </div>
+            <div class="box3">
+                <label for="destination">CHECK OUT</label><br>
+                <input type="text" placeholder="YYYY-MM-DD">
+            </div>
+            <div class="box4">
+                <label for="adultNumber">ADULT</label><br>
+                <select name="" id="adults">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                </select>
+            </div>
+            <div class="box5">
+                <label for="childrenNumber">CHILDREN</label><br>
+                <select name="" id="children">
+                        <option value="1">0</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                </select>
+            </div>
+            <div class="box6">
+                <input type="submit" id="submit" value="SEARCH . . .">
+            </div>
+        </div>
+    </div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="best-tours">
+        <div class="description">
+            <h2>We have best tours</h2>
+            <p><br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo accusantium totam aspernatur eveniet. Obcaecati dicta consectetur, quasi sapiente possimus dolor ab magni illum quia ipsam distinctio, recusandae magnam ex numquam?</p>
+        </div>
+        <div class="cards">
+            <div class="card mauritius">
+                <div class="div-date">
+                     May 25th - June 01st   
+                </div>
+                <div class="name-div">
+                    <h1>Mauritius</h1>
+                    <div class="price">From $1450</div>
+                    <div class="rating rating_4">
+                        <i class="fa fa-star star1"></i>
+                        <i class="fa fa-star star2"></i>
+                        <i class="fa fa-star star3"></i>
+                        <i class="fa fa-star star4"></i>
+                        <i class="fa fa-star star5"></i>
+                    </div>
+                </div>
+                <button class="see-more">SEE MORE ...</button>
+            </div>
+            <div class="card greece">
+                <div class="div-date">
+                    May 25th - June 01st   
+               </div>
+               <div class="name-div">
+                   <h1>GREECE</h1>
+                   <div class="price">From $1450</div>
+                   <div class="rating rating_4">
+                       <i class="fa fa-star star1"></i>
+                       <i class="fa fa-star star2"></i>
+                       <i class="fa fa-star star3"></i>
+                       <i class="fa fa-star star4"></i>
+                       <i class="fa fa-star star5"></i>
+                   </div>
+               </div>
+               <button class="see-more">SEE MORE ...</button>
+            </div>
+            <div class="card scotland">
+                <div class="div-date">
+                    May 25th - June 01st   
+               </div>
+               <div class="name-div">
+                   <h1>SCOTLAND</h1>
+                   <div class="price">From $1450</div>
+                   <div class="rating rating_4">
+                       <i class="fa fa-star star1"></i>
+                       <i class="fa fa-star star2"></i>
+                       <i class="fa fa-star star3"></i>
+                       <i class="fa fa-star star4"></i>
+                       <i class="fa fa-star star5"></i>
+                   </div>
+               </div>
+               <button class="see-more">SEE MORE ...</button>
+            </div>
+        </div>
+    </div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="maldives-deluxe-container">
+        <div class="image">
+            <img src="https://preview.colorlib.com/theme/travelix/images/xcta.jpg.pagespeed.ic.m69gPEowgD.webp" alt="">
+        </div>
+        <div class="overall-container">
+            <div class="heading">
+                <h1>MALDIVES DELUXE PACKAGE</h1>
+            </div>
+            <div class="star">
+                <i class="fa fa-star star1"></i>
+                <i class="fa fa-star star2"></i>
+                <i class="fa fa-star star3"></i>
+                <i class="fa fa-star star4"></i>
+                <i class="fa fa-star star5"></i>
+            </div>
+            <div class="content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, dolores aliquid eius explicabo aut distinctio qui quod provident sapiente adipisci ut neque cupiditate recusandae sunt nobis perspiciatis totam tempore vitae rem maxime modi ratione.
+            </div>
+            <button class="book-now">BOOK NOW ...</button>
+            <span class="arrow prev" onclick="controller(-1)">&#10094</span>
+            <span class="arrow next" onclick="controller(1)">&#10095</span>
+        </div>
+    </div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
 
-        function myGreeting() {
-            document.getElementById("div1").innerHTML = "<h1>Travelix website Under Maintance</h1>"
-        }
-    </script>
+<div class="best-offers">
+    <div class="heading">
+        <h2>THE BEST OFFERS WITH ROOMS</h2>
+    </div>
+    <div class="offers-grid">
+        <div class="grid1 all-grid">
+            <div class="box1">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xoffer_1.jpg.pagespeed.ic.LnLHOsFCJq.webp" alt="">
+                <div class="offer-title">
+                    GRAND CASTLE
+                </div>
+            </div>
+            <div class="box2">
+                <div class="offers_price">$70<span>per night</span></div>
+                <div class="star">
+                    <i class="fa fa-star star1"></i>
+                    <i class="fa fa-star star2"></i>
+                    <i class="fa fa-star star3"></i>
+                    <i class="fa fa-star star4"></i>
+                    <i class="fa fa-star star5"></i>
+                </div>
+                <div class="offer-desciption">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum voluptatem tempore numquam minus nisi ullam. Minima excepturi, inventore illum eaque   </p>
+                </div>
+
+                <div class="icon">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xpost.png.pagespeed.ic.8S9NJqfU1S.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xcompass.png.pagespeed.ic.BMlGyHi2Dm.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xbicycle.png.pagespeed.ic.-D-2GN2myH.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xsailboat.png.pagespeed.ic.bAIbYdxQvf.webp" alt="">
+                </div>
+                <div class="read-more">READ MORE</div>
+            </div>
+        </div>
+        <div class="grid2 all-grid">
+            <div class="box1">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xoffer_2.jpg.pagespeed.ic.HA9cJExNCg.webp" alt="">
+                <div class="offer-title">
+                    GRAND CASTLE
+                </div>
+            </div>
+            <div class="box2">
+                <div class="offers_price">$50<span>per night</span></div>
+                <div class="star">
+                    <i class="fa fa-star star1"></i>
+                    <i class="fa fa-star star2"></i>
+                    <i class="fa fa-star star3"></i>
+                    <i class="fa fa-star star4"></i>
+                    <i class="fa fa-star star5"></i>
+                </div>
+                <div class="offer-desciption">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum voluptatem tempore numquam minus nisi ullam. Minima excepturi, inventore illum eaque   </p>
+                </div>
+
+                <div class="icon">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xpost.png.pagespeed.ic.8S9NJqfU1S.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xcompass.png.pagespeed.ic.BMlGyHi2Dm.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xbicycle.png.pagespeed.ic.-D-2GN2myH.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xsailboat.png.pagespeed.ic.bAIbYdxQvf.webp" alt="">
+                </div>
+                <div class="read-more">READ MORE</div>
+            </div>
+        </div>
+        <div class="grid3 all-grid">
+            <div class="box1">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xoffer_3.jpg.pagespeed.ic.9JfYNcm8fb.webp" alt="">
+                <div class="offer-title">
+                    GRAND CASTLE
+                </div>
+            </div>
+            <div class="box2">
+                <div class="offers_price">$90<span>per night</span></div>
+                <div class="star">
+                    <i class="fa fa-star star1"></i>
+                    <i class="fa fa-star star2"></i>
+                    <i class="fa fa-star star3"></i>
+                    <i class="fa fa-star star4"></i>
+                    <i class="fa fa-star star5"></i>
+                </div>
+                <div class="offer-desciption">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum voluptatem tempore numquam minus nisi ullam. Minima excepturi, inventore illum eaque   </p>
+                </div>
+
+                <div class="icon">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xpost.png.pagespeed.ic.8S9NJqfU1S.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xcompass.png.pagespeed.ic.BMlGyHi2Dm.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xbicycle.png.pagespeed.ic.-D-2GN2myH.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xsailboat.png.pagespeed.ic.bAIbYdxQvf.webp" alt="">
+                </div>
+                <div class="read-more">READ MORE</div>
+            </div>
+        </div>
+        <div class="grid4 all-grid">
+            <div class="box1">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xoffer_4.jpg.pagespeed.ic.sP-uVX8-UR.webp" alt="">
+                <div class="offer-title">
+                    GRAND CASTLE
+                </div>
+            </div>
+            <div class="box2">
+                <div class="offers_price">$30<span>per night</span></div>
+                <div class="star">
+                    <i class="fa fa-star star1"></i>
+                    <i class="fa fa-star star2"></i>
+                    <i class="fa fa-star star3"></i>
+                    <i class="fa fa-star star4"></i>
+                    <i class="fa fa-star star5"></i>
+                </div>
+                <div class="offer-desciption">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum voluptatem tempore numquam minus nisi ullam. Minima excepturi, inventore illum eaque   </p>
+                </div>
+
+                <div class="icon">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xpost.png.pagespeed.ic.8S9NJqfU1S.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xcompass.png.pagespeed.ic.BMlGyHi2Dm.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xbicycle.png.pagespeed.ic.-D-2GN2myH.webp" alt="">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xsailboat.png.pagespeed.ic.bAIbYdxQvf.webp" alt="">
+                </div>
+                <div class="read-more">READ MORE</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- BY SURAJ--------------------------------------------- -->
+<div class="client">
+    <h1>What our clients say about us</h1>
+    <div class="test_slide_container" onload="show()">
+        <div class="left-button" class="button">
+            <button onclick="moveLeft()">&#10094;</button>
+        </div>
+        <div class="test-item" id="c1">
+            <div class="test-icon">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xbackpack.png.pagespeed.ic.FSTbvACRee.webp"
+                    alt="icon slider">
+            </div>
+            <div class="test-item-img-container">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtest_1.jpg.pagespeed.ic.-6ItEd8cDS.webp"
+                    alt="carla img">
+            </div>
+            <div class="test_item_info">
+                <div class="test_name">carla smith</div>
+                <div class="test_date">May 24, 2017</div>
+            </div>
+            <div class="test-quote">
+                <div class="test_quote_title">" Best holliday ever "</div>
+                <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu,
+                    vitae cursus mi hendrerit nec.</p>
+            </div>
+        </div>
+
+
+        <div class="test-item" id="c2">
+            <div class="test-icon">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xbackpack.png.pagespeed.ic.FSTbvACRee.webp"
+                    alt="icon slider">
+            </div>
+            <div class="test-item-img-container">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtest_3.jpg.pagespeed.ic.ewoEOM4gUF.webp"
+                    alt="carla img">
+            </div>
+            <div class="test_item_info">
+                <div class="test_name">carla smith2</div>
+                <div class="test_date">May 24, 2017</div>
+            </div>
+            <div class="test-quote">
+                <div class="test_quote_title">" Best holliday ever "</div>
+                <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu,
+                    vitae cursus mi hendrerit nec.</p>
+            </div>
+        </div>
+
+        <div class="test-item" id="c3">
+            <div class="test-icon">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xbackpack.png.pagespeed.ic.FSTbvACRee.webp"
+                    alt="icon slider">
+            </div>
+            <div class="test-item-img-container">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtest_2.jpg.pagespeed.ic.PdNyty5fyM.webp"
+                    alt="carla img">
+            </div>
+            <div class="test_item_info">
+                <div class="test_name">carla smith3</div>
+                <div class="test_date">May 24, 2017</div>
+            </div>
+            <div class="test-quote">
+                <div class="test_quote_title">" Best holliday ever "</div>
+                <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu,
+                    vitae cursus mi hendrerit nec.</p>
+            </div>
+        </div>
+
+        <!-- <div class="test-item" id="c4">
+            <div class="test-icon">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xbackpack.png.pagespeed.ic.FSTbvACRee.webp"
+                    alt="icon slider">
+            </div>
+            <div class="test-item-img-container">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtest_1.jpg.pagespeed.ic.-6ItEd8cDS.webp"
+                    alt="carla img">
+            </div>
+            <div class="test_item_info">
+                <div class="test_name">carla smith4</div>
+                <div class="test_date">May 24, 2017</div>
+            </div>
+            <div class="test-quote">
+                <div class="test_quote_title">" Best holliday ever "</div>
+                <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu,
+                    vitae cursus mi hendrerit nec.</p>
+            </div>
+        </div> -->
+
+        <!-- <div class="test-item" id="c5">
+            <div class="test-icon">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xbackpack.png.pagespeed.ic.FSTbvACRee.webp"
+                    alt="icon slider">
+            </div>
+            <div class="test-item-img-container">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtest_1.jpg.pagespeed.ic.-6ItEd8cDS.webp"
+                    alt="carla img">
+            </div>
+            <div class="test_item_info">
+                <div class="test_name">carla smith5</div>
+                <div class="test_date">May 24, 2017</div>
+            </div>
+            <div class="test-quote">
+                <div class="test_quote_title">" Best holliday ever "</div>
+                <p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu,
+                    vitae cursus mi hendrerit nec.</p>
+            </div>
+        </div> -->
+
+
+
+        <div class="right-button" class="button">
+            <button onclick="moveRight()">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+<!-- client html end -->
+<hr class="after-client">
+
+<!-- trending html start -->
+<div class="home-trending">
+    <h3>TRENDING NOW</h3>
+    <div class="trending-hotels-container">
+
+        <div class="trending-hotels-card">
+            <div class="trending-logo">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_1.png.pagespeed.ic.T7lv0FH9k0.webp"
+                    alt="trending-logo">
+            </div>
+            <div class="trending-description">
+                <h4>GRAND HOTEL</h4>
+                <h5>From $182</h5>
+                <h4>MADRID, SPAIN</h4>
+            </div>
+        </div>
+
+        <div class="trending-hotels-card">
+            <div class="trending-logo">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_2.png.pagespeed.ic.RVoMK96K_o.webp"
+                    alt="trending-logo">
+            </div>
+            <div class="trending-description">
+                <h4>MARS HOTEL</h4>
+                <h5>From $182</h5>
+                <h4>MADRID, SPAIN</h4>
+            </div>
+        </div>
+
+        <div class="trending-hotels-card">
+            <div class="trending-logo">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_3.png.pagespeed.ic.r-Q1a1RUR6.webp"
+                    alt="trending-logo">
+            </div>
+            <div class="trending-description">
+                <h4>QUEEN HOTEL</h4>
+                <h5>From $182</h5>
+                <h4>MADRID, SPAIN</h4>
+            </div>
+        </div>
+
+        <div class="trending-hotels-card">
+            <div class="trending-logo">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_4.png.pagespeed.ic.IIP5He-Ysz.webp"
+                    alt="trending-logo">
+            </div>
+            <div class="trending-description">
+                <h4>MARS HOTEL</h4>
+                <h5>From $182</h5>
+                <h4>MADRID, SPAIN</h4>
+            </div>
+        </div>
+
+        <div class="trending-hotels-card">
+            <div class="trending-logo">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_5.png.pagespeed.ic.7EI7n6G_29.webp"
+                    alt="trending-logo">
+            </div>
+            <div class="trending-description">
+                <h4>GRAND HOTEL</h4>
+                <h5>From $182</h5>
+                <h4>MADRID, SPAIN</h4>
+            </div>
+        </div>
+
+        <div class="trending-hotels-card">
+            <div class="trending-logo">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_6.png.pagespeed.ic.VzjfNeZa0P.webp"
+                    alt="trending-logo">
+            </div>
+            <div class="trending-description">
+                <h4>MARS HOTEL</h4>
+                <h5>From $182</h5>
+                <h4>MADRID, SPAIN</h4>
+            </div>
+        </div>
+
+        <div class="trending-hotels-card">
+            <div class="trending-logo">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_7.png.pagespeed.ic.zHzApqDPn0.webp"
+                    alt="trending-logo">
+            </div>
+            <div class="trending-description">
+                <h4>QUEEN HOTEL</h4>
+                <h5>From $182</h5>
+                <h4>MADRID, SPAIN</h4>
+            </div>
+        </div>
+
+        <div class="trending-hotels-card">
+            <div class="trending-logo">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xtrend_8.png.pagespeed.ic.PnOWJ1cx4g.webp"
+                    alt="trending-logo">
+            </div>
+            <div class="trending-description">
+                <h4>MARS HOTEL</h4>
+                <h5>From $182</h5>
+                <h4>MADRID, SPAIN</h4>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- trending html end -->
+
+
+
+
+<!-- background with get in touch start -->
+<div class="container-bg">
+    <div class="contact_form_container">
+        <div class="contact_title">get in touch</div>
+        <form action="#" id="contact_form" class="contact_form">
+            <div>
+                <input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Name"
+                    required="" data-error="Name is required.">
+                <input type="text" id="contact_form_email" class="contact_form_email input_field"
+                    placeholder="E-mail" required="" data-error="Email is required.">
+            </div>
+
+            <input type="text" id="contact_form_subject" class="contact_form_subject input_field"
+                placeholder="Subject" required="" data-error="Subject is required.">
+            <textarea id="contact_form_message" class="text_field contact_form_message" name="message" rows="4"
+                placeholder="Message" required="" data-error="Please, write us a message."></textarea>
+            <button type="submit" id="form_submit_button" class="form_submit_button button">send message
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </form>
+    </div>
+
+</div>
+
+</div>
+<!-- background with get touch in end -->
+
+
+<!-- top footer start -->
+<div class="top-footer">
+    <div>
+        <div>
+            <div>
+                <img  src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA"
+                alt="LOGO" srcset="">
+            </div>
+            
+            <h1>TRAVELIX</h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat
+            nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula pretium.</p>
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-behance"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>BLOG POSTS</h3>
+        <div>
+            <div class="blog-post-logo-container">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xfooter_blog_1.jpg.pagespeed.ic.n5JT1wzbm-.webp"
+                alt="footer log">
+            </div>
+            
+            <div>
+                <h5>Travel with us this year</h5>
+                <h5>Nov 29, 2017</h5>
+            </div>
+        </div>
+        <div>
+            <div class="blog-post-logo-container">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xfooter_blog_2.jpg.pagespeed.ic.u_Bp7zMu38.webp"
+                alt="footer log">
+            </div>
+            
+            <div>
+                <h5>New destinations for you</h5>
+                <h5>Nov 29, 2017</h5>
+            </div>
+        </div>
+        <div>
+            <div class="blog-post-logo-container">
+                <img src="https://preview.colorlib.com/theme/travelix/images/xfooter_blog_3.jpg.pagespeed.ic.XDkX_CloU3.webp"
+                alt="footer log">
+            </div>
+            
+            <div>
+                <h5>Travel with us this year</h5>
+                <h5>Nov 29, 2017</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-footer-tag-container">
+        <h3>TAGS</h3>
+        <div>
+            <ul>
+                <li><a href="#">design</a></li>
+                <li><a href="#">fashion</a></li>
+                <li><a href="#">music</a></li>
+                <li><a href="#">video</a></li>
+                <li><a href="#">party</a></li>
+                <li><a href="#">photography</a></li>
+                <li><a href="#">adventure</a></li>
+                <li><a href="#">travel</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="top-footer-content-info">
+        <h3>CONTACT INFO</h3>
+        <div class="contact-info-item">
+            <div class="contact-info-icon">
+                <img src="https://preview.colorlib.com/theme/travelix/images/placeholder.svg" alt="icon">
+            </div>
+            <div class="contact_info_text">4127 Raoul Wallenber 45b-c Gibraltar</div>
+        </div>
+
+        <div class="contact-info-item">
+            <div class="contact-info-icon">
+                <img src="https://preview.colorlib.com/theme/travelix/images/phone-call.svg" alt="icon">
+            </div>
+            <div class="contact_info_text">2556-808-8613</div>
+        </div>
+
+        <div class="contact-info-item">
+            <div class="contact-info-icon">
+                <img src="https://preview.colorlib.com/theme/travelix/images/message.svg" alt="icon">
+            </div>
+            <div class="contact_info_text">contactme@gmail.com</div>
+        </div>
+
+        <div class="contact-info-item">
+            <div class="contact-info-icon">
+                <img src="https://preview.colorlib.com/theme/travelix/images/planet-earth.svg" alt="icon">
+            </div>
+            <div class="contact_info_text">www.colorlib.com</div>
+        </div>
+
+    </div>
+</div>
+<!-- top footer end -->
+
+<!-- copyright footer start -->
+<div class="copyright">
+    <p>Copyright ©2022 All rights reserved | This template is made with<i class="fa fa-heart-o"></i> by <span>Colorlib</span></p>
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">OFFERS</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+</div>
+<!-- copyright footer end -->
+
+
+
+
+    
+
 </body>
 </html>
+<script src="index.js"></script>
