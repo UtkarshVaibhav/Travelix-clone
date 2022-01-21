@@ -102,3 +102,39 @@ resposiveExtraClick.addEventListener('click',()=>{
     }
     resposiveDiv.classList.toggle('show_extra_option_responsive');
 });
+
+
+
+// OFFER SORTING _________________________________
+
+// const ascending_click=document.querySelector(".ascending")
+// ascending_click.addEventListener('click',sortInAsc)
+// // addEventListener("click", sortInAsc);
+
+// function sortInAsc(){
+//     var shouldSwitch;
+//     var all_grids=document.getElementsByClassName("all-grid");
+//     var parentGrid=document.getElementsByClassName("offers-grid");
+//     var switching=true;
+//     while(switching)
+//     {
+//         switching=false;
+//         var offer_price=document.getElementsByClassName("offers_price");
+//         for(var i=0;i<offer_price.length;i++)
+//         {
+//             shouldSwitch = false;
+//             if(+offer_price[i].innerHTML.split("<")[0].split("$")[1] > +offer_price[i+1].innerHTML.split("<")[0].split("$")[1]){
+//                 shouldSwitch=true;
+//                 break;
+//             }
+//         }
+//         if(shouldSwitch)
+//         {
+//             parentGrid.parentNode.insertBefore(all_grids[i+1],all_grids[i])
+//             switching = true;
+//         }
+//         // .innerHTML.split("<")[0].split("$")[1];
+        
+//     }
+
+// }
