@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under procces</title>
+    <style>
+        .maintance{
+            height: 500px;
+            width: 100%;
+            background-image: url('https://www.seedprod.com/wp-content/uploads/2020/09/maintenance-mode-page-templates.jpg');
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;
+        }
+        #div1 {
+            width: 220px;
+            height: 200px;
+            position:absolute;
+            animation: mymove 4s infinite;
+            background-image: linear-gradient(to bottom, rgb(238, 236, 236), #e9e923, rgb(0,50,90));
+            
+            border-radius: 50%;
+            padding-top: 50px;
+            padding-left: 30px;
+            text-align: center;
+        }
+
+    @keyframes mymove {
+        from {left: 0px;}
+        to {left: 41%;};   
+    }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div class="maintance"> </div>
+    <!-- <img src="https://www.seedprod.com/wp-content/uploads/2020/09/maintenance-mode-page-templates.jpg" alt=""> -->
+    <script>
+        const myTimeout = setTimeout(myGreeting, 3000);
+
+        function myGreeting() {
+            document.getElementById("div1").innerHTML = "<h1>Under Maintance</h1>"
+        }
+    </script>
+</body>
+</html>
