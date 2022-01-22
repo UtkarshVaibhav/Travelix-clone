@@ -48,12 +48,12 @@ about contact uspage
 <img src="images/contact.PNG">
 ## Features
 
-1. A static clone of Travelix
-2. <br>
+* A static clone of Travelix
+<br>
 
 ## Limitations
 
-1. responsive for all device
+* responsive for all device
 
 <br>
 
@@ -69,10 +69,9 @@ about contact uspage
 
 👤 **Suraj Himanshu**
 
-- Github: 
-- Linkedin:
+- Github: [Suraj Himanshu](https://github.com/surajhimanshu)
 
 👤 **Utkash Vaibhav**
 
-- Github: [rohanranjan25061996](https://github.com/rohanranjan25061996)
-- Linkedin: [Rohan Ranjan](www.linkedin.com/in/rohan-ranjan-3a3048130)
+- Github: [Utkash Vaibhav](https://github.com/UtkarshVaibhav)
+- Linkedin: [Utkash Vaibhav](https://www.linkedin.com/in/utkarshvaibhav233)
