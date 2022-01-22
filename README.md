@@ -16,35 +16,41 @@ Travelix. Home; Flights; Hotels; Car Rental; Taxi; Tour; Cruises; shop; Blog; Di
 - **CSS**
 - **JavaScript**
 
+
 ### **Index Page:**
 
-about index
-// link of indexpage
-<img src="images/index.PNG">
+Discover The World For Less. Save up to 60% on hotels and flights worldwide. 
 
+<img src="images/index.PNG">
 
 
 ### **About Us:**
 
-about about-us
+If You will open the about us page, there are given some tour data. WE HAVE THE BEST TOURS FOR YOU.
 
 <img src="images/Abouts-us.PNG">
 
+
 ### **Offer:**
 
-about offer
+It is very intersting page for you, there are many #offer for you
 
 <img src="images/offers.PNG">
 
+
 ### **News:**
 
-about news page
+There are some blog for you if you will read it and also enjoy it.
+For exmple Try these new dream destinations
+
 <img src="https://github.com/Amanullah21/Travelix-Clone/blob/main/images/news.PNG">
+
 
 ### **contact us:**
 
-about contact uspage
+About contact uspage
 
+If you have anu query related any think , you conect by these page .
 <img src="images/contact.PNG">
 ## Features
 
