@@ -20,7 +20,7 @@ Travelix. Home; Flights; Hotels; Car Rental; Taxi; Tour; Cruises; shop; Blog; Di
 
 about index
 // link of indexpage
-<img src="https://github.com/Amanullah21/Travelix-Clone/blob/main/images/index.PNG">
+<img src="images/index.PNG">
 
 
 
