@@ -28,24 +28,24 @@ about index
 
 about about-us
 
-<img src="images/about.png">
+<img src="images/Abouts-us.PNG">
 
 ### **Offer:**
 
 about offer
 
-<img src="images/offer.png">
+<img src="images/offers.PNG">
 
 ### **News:**
 
 about news page
-<img src="images/news.png">
+<img src="https://github.com/Amanullah21/Travelix-Clone/blob/main/images/news.PNG">
 
 ### **contact us:**
 
 about contact uspage
 
-<img src="images/About-us.PNG">
+<img src="images/contact.PNG">
 ## Features
 
 1. A static clone of Travelix
