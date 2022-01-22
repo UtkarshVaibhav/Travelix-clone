@@ -28,22 +28,24 @@ about index
 
 about about-us
 
-<img src="about.png">
+<img src="images/about.png">
 
 ### **Offer:**
 
 about offer
 
-<img src="offer.png">
+<img src="images/offer.png">
 
 ### **News:**
 
 about news page
-<img src="new-page.png">
+<img src="images/news.png">
 
 ### **contact us:**
 
 about contact uspage
+
+<img src="images/About-us.PNG">
 ## Features
 
 1. A static clone of Travelix
