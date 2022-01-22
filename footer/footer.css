@@ -264,5 +264,28 @@ li{
       /* border: 1px solid green; */
     }
    }
+
+   @media only screen and (max-width: 650px){
+     .top-footer p{
+       font-size: 0.9em;
+     }
+        .blog-post-logo-container {
+          margin-right: 15px;
+        }
+        .blog-post-logo-container + div {
+          margin-left: 15px;
+          font-size: 0.8em;
+        }
+        .top-footer-tag-container ul li a{
+          font-size: 0.9em;
+          padding: 2px;
+        }
+        .contact_info_text{
+          font-size: 0.9em;
+        }
+        .copyright{
+          padding-bottom: 10px;
+        }
+   } 
    
   /* media query  footer suraj end*/
