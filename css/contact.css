@@ -209,7 +209,7 @@ width: 200px;
   }
 }
 
-/* navbar css end */
+/* ------------------------------------------------------------------------------------navbar css end----------------------------------------------------------------------- */
 
 
 .contact-us{
@@ -253,7 +253,7 @@ width: 200px;
 .contact_form_container {
   /* position: absolute;  */
   left: 50%; 
-  height: 550px;
+  height: 600px;
    top: 5%; 
    bottom: 15%;
   background: linear-gradient(to top right, #fa9e1b, #8d4fff);
