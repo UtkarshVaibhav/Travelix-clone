@@ -33,7 +33,7 @@ If You will open the about us page, there are given some tour data. WE HAVE THE 
 
 ### **Offer:**
 
-It is very intersting page for you, there are many #offer for you
+It is very intersting page, there are many offer for you
 
 <img src="images/offers.PNG">
 
