@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <script src="https://kit.fontawesome.com/c14fc2b87b.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter&family=Dancing+Script:wght@700&family=El+Messiri&family=Inspiration&family=Lato:wght@300&family=Montserrat:ital@1&family=Roboto:wght@400;700&family=Sacramento&family=Twinkle+Star&display=swap" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/052942d93d.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="css/news.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="nav-container">
+        <div class="top-nav-bar">
+            <div class="left-part">
+                    <ul>
+                        <li class="phone">+45 345 3324 56789</li>
+                        <li class="icon"><a href=""><i class="fab fa-pinterest"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li class="icon"><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+            </div>
+            <div class="right-part">
+                    <ul>
+                        <li><a href="" class="login">LOGIN</a></li>
+                        <li><a href="" class="register"> REGISTER</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="bottom-nav-bar">
+            <div class="logo">
+                <img src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA" alt="">TRAVELIX
+            </div>
+            <div class="nav-bar">
+                <ul class="upper-target-ul">
+                    <div class="cross-mark"><i class="fas fa-times"></i></div>
+                    <li><img src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA" alt=""></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Abouts-us.html">ABOUT US</a> </li>
+                    <li><a href="offers.html">OFFERS</a> </li>
+                    <li><a href="news.html">NEWS</a> </li>
+                    <li><a href="contact.html">CONTACT</a> </li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="search-bar" type="text">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="burgur">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-news-blog-image">
+        <!-- <img src="blog1.jpeg" alt="" srcset=""> -->
+        <h1 class="main-news-blog-image-blog-written">The Blog</h1>
+    </div>
+
+    <!-- starting of content blog -->
+    <div class="news-blog-container">
+
+        <div class="news-blog-left-container">
+
+            <div class="news-blog-left-card">
+                <div class="news-blog-left-img-container">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xblog_1.jpg.pagespeed.ic.dvdmQ6iHwJ.webp"
+                        alt="blog photo">
+                    <div class="news-blog-left-below-img-date">
+                        <h2>01</h2>
+                        <h4>Dec, 2017</h4>
+                    </div>
+                </div>
+                <div class="blog_post_meta">
+                    <ul>
+                        <li class="blog_post_meta_item"><a href="">by Lore Papp</a></li>
+                        <span>|</span>
+                        <li class="blog_post_meta_item"><a href="">Uncategorized</a></li>
+                        <span>|</span>
+                        <li class="blog_post_meta_item"><a href="">3 Comments</a></li>
+                    </ul>
+                </div>
+                <div class="blog_post_title"><a href="#">Try these new dream destinations</a></div>
+                <div class="blog_post_text">
+                    <p>Aenean in lacus ligula. Phasellus euismod gravida eros. Aenean nec ipsum aliquet, pharetra magna
+                        id, interdum sapien. Etiam id lorem eu nisl pellentesque semper. Nullam tincidunt metus
+                        placerat, suscipit leo ut, tempus nulla. Fusce at eleifend tellus. Ut eleifend dui nunc, non
+                        fermentum qua.</p>
+                </div>
+                <div class="blog_post_link"><a href="#">read more</a></div>
+            </div>
+
+            <div class="news-blog-left-card">
+                <div class="news-blog-left-img-container">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xblog_2.jpg.pagespeed.ic.iL3pHcYFGt.webp"
+                        alt="blog photo">
+                    <div class="news-blog-left-below-img-date">
+                        <h2>01</h2>
+                        <h4>Dec, 2017</h4>
+                    </div>
+                </div>
+                <div class="blog_post_meta">
+                    <ul>
+                        <li class="blog_post_meta_item"><a href="">by Lore Papp</a></li>
+                        <span>|</span>
+                        <li class="blog_post_meta_item"><a href="">Uncategorized</a></li>
+                        <span>|</span>
+                        <li class="blog_post_meta_item"><a href="">3 Comments</a></li>
+                    </ul>
+                </div>
+                <div class="blog_post_title"><a href="#">Try these new dream destinations</a></div>
+                <div class="blog_post_text">
+                    <p>Aenean in lacus ligula. Phasellus euismod gravida eros. Aenean nec ipsum aliquet, pharetra magna
+                        id, interdum sapien. Etiam id lorem eu nisl pellentesque semper. Nullam tincidunt metus
+                        placerat, suscipit leo ut, tempus nulla. Fusce at eleifend tellus. Ut eleifend dui nunc, non
+                        fermentum qua.</p>
+                </div>
+                <div class="blog_post_link"><a href="#">read more</a></div>
+            </div>
+
+            <div class="news-blog-left-card">
+                <div class="news-blog-left-img-container">
+                    <img src="	https://preview.colorlib.com/theme/travelix/images/xblog_3.jpg.pagespeed.ic.SCSQsFn6ZU.webp"
+                        alt="blog photo">
+                    <div class="news-blog-left-below-img-date">
+                        <h2>01</h2>
+                        <h4>Dec, 2017</h4>
+                    </div>
+                </div>
+                <div class="blog_post_meta">
+                    <ul>
+                        <li class="blog_post_meta_item"><a href="">by Lore Papp</a></li>
+                        <span>|</span>
+                        <li class="blog_post_meta_item"><a href="">Uncategorized</a></li>
+                        <span>|</span>
+                        <li class="blog_post_meta_item"><a href="">3 Comments</a></li>
+                    </ul>
+                </div>
+                <div class="blog_post_title"><a href="#">Try these new dream destinations</a></div>
+                <div class="blog_post_text">
+                    <p>Aenean in lacus ligula. Phasellus euismod gravida eros. Aenean nec ipsum aliquet, pharetra magna
+                        id, interdum sapien. Etiam id lorem eu nisl pellentesque semper. Nullam tincidunt metus
+                        placerat, suscipit leo ut, tempus nulla. Fusce at eleifend tellus. Ut eleifend dui nunc, non
+                        fermentum qua.</p>
+                </div>
+                <div class="blog_post_link"><a href="#">read more</a></div>
+            </div>
+
+            <div class="blog_navigation">
+                <ul>
+                    <li class="blog_dot active">
+                        <div>01.</div>
+                    </li>
+                    <li class="blog_dot">
+                        <div>02.</div>
+                    </li>
+                    <li class="blog_dot">
+                        <div>03.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="news-blog-right-container">
+
+            <div class="sidebar_search">
+                <form action="#">
+                    <input id="sidebar_search_input" type="search" class="sidebar_search_input" placeholder=""
+                        required="">
+
+                </form>
+            </div>
+
+            <div class="sidebar_archives">
+                <div class="sidebar_title">Archives</div>
+                <div class="sidebar_list">
+                    <ul>
+                        <li><a href="#">March 2017</a></li>
+                        <li><a href="#">April 2017</a></li>
+                        <li><a href="#">May 2017</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar_categories">
+                <div class="sidebar_title">Categories</div>
+                <div class="sidebar_list">
+                    <ul>
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Exotic Destinations</a></li>
+                        <li><a href="#">City Breaks</a></li>
+                        <li><a href="#">Travel Tips</a></li>
+                        <li><a href="#">Lifestyle &amp; Travel</a></li>
+                        <li><a href="#">City Breaks</a></li>
+                        <li><a href="#">Uncategorized</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar_latest_posts">
+                <div class="sidebar_title">Latest Posts</div>
+                <div class="latest_posts_container">
+
+                    <div class="latest_post">
+                        <div class="latest_post_image">
+                            <img src="https://preview.colorlib.com/theme/travelix/images/xlatest_1.jpg.pagespeed.ic.KgXQw3HBiN.webp"
+                                alt="latest_post_img">
+                        </div>
+                        <div class="lastest_post_content">
+                            <div class="latest_post_title">A simple blog post</div>
+                            <div class="latest_post_author">
+                                <div>by Jane Smith /</div>
+                                <div>Aug 25, 2016</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="latest_post">
+                        <div class="latest_post_image">
+                            <img src="https://preview.colorlib.com/theme/travelix/images/xlatest_2.jpg.pagespeed.ic.8506js-mm4.webp"
+                                alt="latest_post_img">
+                        </div>
+                        <div class="lastest_post_content">
+                            <div class="latest_post_title">A simple blog post</div>
+                            <div class="latest_post_author">
+                                <div>by Jane Smith /</div>
+                                <div>Aug 25, 2016</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="latest_post">
+                        <div class="latest_post_image">
+                            <img src="https://preview.colorlib.com/theme/travelix/images/xlatest_3.jpg.pagespeed.ic.M75E-IYm0Z.webp"
+                                alt="latest_post_img">
+                        </div>
+                        <div class="lastest_post_content">
+                            <div class="latest_post_title">A simple blog post</div>
+                            <div class="latest_post_author">
+                                <div>by Jane Smith /</div>
+                                <div>Aug 25, 2016</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="latest_post">
+                        <div class="latest_post_image">
+                            <img src="https://preview.colorlib.com/theme/travelix/images/xlatest_4.jpg.pagespeed.ic.FONdPvxAce.webp"
+                                alt="latest_post_img">
+                        </div>
+                        <div class="lastest_post_content">
+                            <div class="latest_post_title">A simple blog post</div>
+                            <div class="latest_post_author">
+                                <div>by Jane Smith /</div>
+                                <div>Aug 25, 2016</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="sidebar_gallery">
+                <div class="sidebar_title">Instagram</div>
+                <div class="gallery_container">
+                    <div class="gallery_item">
+                        <img src="https://preview.colorlib.com/theme/travelix/images/xgallery_1.jpg.pagespeed.ic.Cg--9A9XRW.webp" alt="gallery item logo">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="https://preview.colorlib.com/theme/travelix/images/xgallery_2.jpg.pagespeed.ic.kspBSR1zsr.webp" alt="gallery item logo">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="https://preview.colorlib.com/theme/travelix/images/xgallery_3.jpg.pagespeed.ic.o-rL4UPQSq.webp" alt="gallery item logo">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="https://preview.colorlib.com/theme/travelix/images/xgallery_4.jpg.pagespeed.ic.2YAwIMLOaV.webp" alt="gallery item logo">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="https://preview.colorlib.com/theme/travelix/images/xgallery_5.jpg.pagespeed.ic.G46gD5Gta5.webp" alt="gallery item logo">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="https://preview.colorlib.com/theme/travelix/images/xgallery_6.jpg.pagespeed.ic.CNNJY6C0bc.webp" alt="gallery item logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ending of content of blog -->
+
+
+    <!-- top footer start -->
+    <div class="top-footer">
+        <div>
+            <div>
+                <div>
+                    <img  src="data:image/webp;base64,UklGRqQFAABXRUJQVlA4TJgFAAAvIoALEI0obNsGhWNMRP+DiQGwiUAgyZ9yhHEEAikOYYQVpG3AxL/KHSP9jwSAc/IEoGRt2zFJup6ysYbalG3XzDNrZnSPuKqe20bE04o/vtiBVNu2lm2Z+3nf33Hof+MCXBKZSKKRuCgSjUQkkWk0iy7RXR7+Tbe2bWVbNvd9ns+/L8SdyD2jACvAqcAhdgupggYowd0K8Mjtd/n8UIAk2bRt5T7Xtp9t27Zt2za/bdu2bdt4to3rG2cCEMDUxy/2h9auUx3XLJPd167TLdfk/xprMpm+JpNn15g6sMbUj8nM58nM56iAsXeeHau2dp1c/PjC0dFFghZ0Rk3UJB3ILMkj4Rvcjlojbj+6lLl2ndx+58zZPpQigEJCEAiIgkSpHngCNyJ3qWsPbwx9cOXcNRQgAkoRSBBACIREgAAtcCf6T7v64Gawdv3/iqdXTzXSQo//FSKMb8KH5Tc0R03SmPTGMvKGpAgEQBymYBqCCRfu3wqeXTtwN0EhKKQ03E/dAgD4HP/if3yHZ7EsqhNZF44DADpiHEKLetBfQ1AISuUrBufDVJTgM8wUzwIAmqMzwv93+t7tCa+v764CBIXcG16AJVGMF3EXygDQAXn/c+zu88rv39i1LgIolduwA5bHb3gSANADn/2n7e/QqAKat6I+gZH4D78iBIjBl9gPcPDO684f3NyYUQQ4XVbB2MS3iAQA3AbQ9ltbggJbYTR+RlUAfIKP9t7+XPeTW1sKAMhx8tYwnEABAkAYC3rQDQaiIfUMjE8Uoh4A1s3bd4VAKW+vIHEAwwHwdtsaahSRMH5YAcoxELGAfW2fRdKAHMNGlI6DjNqJ2oBM7RJINIgDuBlWuGZxnkoBJFR3QRII5DTuWcWa0cg8wIXqj0higYRx9yoyWkYUCg5X93/IIkgCeWgVGa0OxDzsqO4bVU+CEF+heNymIxOJv3//t1oaUqhvNB+hNwG4hJ3j1oxuUBtSIOY/xq+kd0CQWrQvxhltVgCpfTgDJBVpEiSWlKNk1NZTizv+8uF7rBRF8hgAdpD20oBoSw4O2nJyZfQvHz7eAhRRqh4DwCWSHCIJEk060wrHiGsTKIDHAADwM62uBEEqNa1bR2/E5lNrF/364X20AijGTf/BJVwOMUCIxpgifdJSG4+vC5L5zb9/fJsJRVKoG+F/8RMtVwIIUhcbZKDdEhuObq32++c/7w4oRVD+C6/+H8rxTUiHgECGWGEM3mEZ7WoZCxatP7Svnvy28M+vz3sWUiAoFVEzYSGO0A5IC4GEQAJSL3Wt5HPL0CPZGFsU7YDMFsrf0cmHfHnVgJfd//qxPJZCBBQokroCJuK6anXJcIqGAE2kqqAnWpQqiA8ICkGpYBBTCAjvUT9NQVgzucmaSJMGBaAhoiGAAggKEVAICv4sV8NkFFYbou6T1AJQiI6SRgERQKkACsEgpg9Rc2BJnKw2RT0hsjQkKBogaFQBjShASCHnMR6Wxi5tayvPimiFgIagCKAggKIppcbBQHxZ7VHNwyIAIFqCAgIAEq6aCUPxdLW/cY0GAABBFADUFTAY17VdipivANGQUgSApyu7RkF1i1XvjgyBQCkCKJ/gKRiOiuomUcs0bYsIgPJnZCusEIVtN1bcqmoVCW0OhTkwdM/T6zU0TZpWp1olbZWqZVIZ1eK0K/tjY8HFz07vN19HmLN2P75dKV+n3pvNofzZHD43n8NF8zlyejZHTs3mzkOzOXJoPod3zObwH9izaM/T6xsw99Onv8DCdX/+sOvtU1/v77br+UM/vu/89Wk8BSGkIg4ZyEQlVEIdNJnN4cjZ/3b/AkAAEzf8+Gb37h3f7pc/PoyCiQgQXoBrcB+i0AR1UBmVkIkMxCMZMYhfMyfN12GAQpTgAgpxGqdwCAexA3+gDAAA"
+                    alt="LOGO" srcset="">
+                </div>
+                
+                <h1>TRAVELIX</h1>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat
+                nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula pretium.</p>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>BLOG POSTS</h3>
+            <div>
+                <div class="blog-post-logo-container">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xfooter_blog_1.jpg.pagespeed.ic.n5JT1wzbm-.webp"
+                    alt="footer log">
+                </div>
+                
+                <div>
+                    <h5>Travel with us this year</h5>
+                    <h5>Nov 29, 2017</h5>
+                </div>
+            </div>
+            <div>
+                <div class="blog-post-logo-container">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xfooter_blog_2.jpg.pagespeed.ic.u_Bp7zMu38.webp"
+                    alt="footer log">
+                </div>
+                
+                <div>
+                    <h5>New destinations for you</h5>
+                    <h5>Nov 29, 2017</h5>
+                </div>
+            </div>
+            <div>
+                <div class="blog-post-logo-container">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/xfooter_blog_3.jpg.pagespeed.ic.XDkX_CloU3.webp"
+                    alt="footer log">
+                </div>
+                
+                <div>
+                    <h5>Travel with us this year</h5>
+                    <h5>Nov 29, 2017</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-footer-tag-container">
+            <h3>TAGS</h3>
+            <div>
+                <ul>
+                    <li><a href="#">design</a></li>
+                    <li><a href="#">fashion</a></li>
+                    <li><a href="#">music</a></li>
+                    <li><a href="#">video</a></li>
+                    <li><a href="#">party</a></li>
+                    <li><a href="#">photography</a></li>
+                    <li><a href="#">adventure</a></li>
+                    <li><a href="#">travel</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="top-footer-content-info">
+            <h3>CONTACT INFO</h3>
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/placeholder.svg" alt="icon">
+                </div>
+                <div class="contact_info_text">4127 Raoul Wallenber 45b-c Gibraltar</div>
+            </div>
+
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/phone-call.svg" alt="icon">
+                </div>
+                <div class="contact_info_text">2556-808-8613</div>
+            </div>
+
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/message.svg" alt="icon">
+                </div>
+                <div class="contact_info_text">contactme@gmail.com</div>
+            </div>
+
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <img src="https://preview.colorlib.com/theme/travelix/images/planet-earth.svg" alt="icon">
+                </div>
+                <div class="contact_info_text">www.colorlib.com</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- top footer end -->
+
+    <!-- copyright footer start -->
+    <div class="copyright">
+        <p>Copyright ©2022 All rights reserved | This template is made with<i class="fa fa-heart-o"></i> by <span>Colorlib</span></p>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Abouts-us.html">ABOUT US</a></li>
+            <li><a href="offers.html">OFFERS</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+    <!-- copyright footer end -->
+
+
+    <script src="javascript/nav.js"></script>
+</body>
+
+</html>
