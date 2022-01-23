@@ -1,6 +1,5 @@
-/* navbar start  */
- 
-/* * nav bar css strat */ */
+
+/* *------ -----------------nav bar css strat-------------------------------------- */ */
 *{
   margin: 0;
   padding: 0;
@@ -22,7 +21,6 @@ ul{
 i:hover,.login:hover,.register:hover{
   color: rgb(233, 114, 71);
 }
-/* NAV-----------------------------------------------------BAR */
 .top-nav-bar{
   display: flex;
   justify-content: space-around;
@@ -97,10 +95,10 @@ padding-bottom: 10px;
 }
 .search-active{
 /* display: block; */
-transform: translateX(0%);
-z-index: 100;
-opacity: 1;
-width: 200px;
+ transform: translateX(0%);
+ z-index: 100;
+ opacity: 1;
+ width: 200px;
 }
 .burgur{
   cursor: pointer;
@@ -285,7 +283,7 @@ width: 200px;
     cursor: pointer;
     background-image: linear-gradient(to right,#8d4fff, orange);
 }
-span{
+.span1{
     font-size: 30px;
     font-weight: 600;
     font-style: italic;
@@ -399,6 +397,7 @@ span{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    margin-left: 30px;
 }
 .thailand-text{
     font-size: 48px;
@@ -419,6 +418,7 @@ span{
     display: grid;
     padding: 5px 130px;
     grid-template-columns: repeat(4,24%);
+    margin-left: 5%;
 }
 .clints-section>div{
     height: 330px;
@@ -459,6 +459,9 @@ span{
         margin: auto;
     }
 }
+
+
+/* ------------------------media screen 1030px ------------------*/
 @media only screen and (max-width: 1030px){
     /* #body{
        background-color: crimson;
@@ -467,7 +470,7 @@ span{
         height: 1100px;
         padding: 20px;
         display: block;
-        background-color: darkslateblue;
+        /* background-color: darkslateblue; */
     }
     .we-have-section-one{
         height: 500px;
@@ -508,7 +511,7 @@ span{
     .thaland-section-img-section{
         margin-top: -30px;
         /* margin-left: 5%; */
-        background-color: darkorchid;
+        /* background-color: darkorchid; */
     }
     .thaland-section-img{
         height: 350px;
@@ -518,15 +521,19 @@ span{
     }
     .thaland-section-img-section{
         margin-top: 10px;
-        margin-left: 5%;
+        margin-left: 0%;
         margin-right: 5%;
     
+    }
+    .thaland-section-img{
+        margin-left: 25px;
     }
     .clints-section{
         width: 73%;
         height: 1300px;
         display: block;
         padding: 1px 130px;
+        margin-left: 15%;
     }
     .clints-section>div{
         height: 300px;
@@ -593,6 +600,7 @@ span{
         height: 1300px;
         display: block;
         padding: 1px 100px;
+        margin-left: 15%;
     }
     .year-statisics-section{
         height: 750px;
@@ -625,6 +633,7 @@ span{
         height: 1300px;
         display: block;
         padding: 1px 70px;
+        margin-left: 15%;
     }
     .year-statisics-section{
         height: 800px;
