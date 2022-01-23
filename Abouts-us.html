@@ -220,18 +220,18 @@
         </div>
         <div>
             <img src="https://preview.colorlib.com/theme/travelix/images/xmilestone_2.png.pagespeed.ic.V3B1723E2Z.webp" alt="PROJECTS">
-            <h1 id="changeNum">200</h1>
+            <h1 id="changeNum1">200</h1>
             <p>PROJECTS</p>
         </div>
 
         <div>
             <img src="https://preview.colorlib.com/theme/travelix/images/xmilestone_3.png.pagespeed.ic.TqXoultJd7.webp" alt="">
-            <h1 id="changeNum">14</h1>
+            <h1 id="changeNum2">14</h1>
             <p>COUNTRIES</p>
         </div>
         <div>
             <img src="https://preview.colorlib.com/theme/travelix/images/xmilestone_4.png.pagespeed.ic.y4je2yi22m.webp" alt="COFFEES">
-            <h1 id="changeNum">423</h1>
+            <h1 id="changeNum3">423</h1>
             <p>COFFEES</p>
         </div>
     </div>
@@ -363,10 +363,47 @@
 
         <script>
             // rendom number pick
-            let x = Math.floor((Math.random() * 1100) + 1);
-            for(let i=x-10;i<=x;i++){
-                    document.getElementById("changeNum").innerHTML = x;
-            }
+            let x =2800
+            // let x = Math.floor((Math.random() * 1100) + 1);
+            // for(let i=x-10;i<=x;i++){
+            //         document.getElementById("changeNum").innerHTML = x;
+            // }
+            
+           let id =  setInterval(() => {
+                document.getElementById("changeNum").innerHTML = x;
+                x++
+                if(x == 3303){
+                    clearInterval(id)   
+                }
+            }, 10);
+
+            let y = 100
+            let id1 =  setInterval(() => {
+                document.getElementById("changeNum1").innerHTML = y;
+                y++
+                if(y == 204){
+                    clearInterval(id1)   
+                }
+            }, 50);
+
+            let z = 1
+            let id2 =  setInterval(() => {
+                document.getElementById("changeNum2").innerHTML = z;
+                z++
+                if(z == 11){
+                    clearInterval(id2)   
+                }
+            }, 500);
+
+
+            let a = 300
+            let id3 =  setInterval(() => {
+                document.getElementById("changeNum3").innerHTML = a;
+                a++
+                if(a == 480){
+                    clearInterval(id3)   
+                }
+            }, 28);
             
             
         //------------------------------------------------------- nav bar  -------------------------------------------------   
