@@ -43,7 +43,7 @@ It is very intersting page, there are many offer for you
 There are some blog for you if you will read it and also enjoy it.
 For exmple Try these new dream destinations
 
-<img src="https://github.com/Amanullah21/Travelix-Clone/blob/main/images/news.PNG">
+<img src="https://github.com/Amanullah21/Travelix-Clone/blob/main/images/news.png">
 
 
 ### **contact us:**
