@@ -22,21 +22,21 @@ Home, Flights, Hotels, Car Rental, Taxi, Tour, Cruises, shop, Blog, Discover The
 Discover The World For Less. Save up to 60% on hotels and flights worldwide. 
 
 <img src="images/index.PNG">
-
+<br>
 
 ### **About Us:**
 
 If You will open the about us page, there are given some tour data. WE HAVE THE BEST TOURS FOR YOU.
 
 <img src="images/Abouts-us.PNG">
-
+<br>
 
 ### **Offer:**
 
 It is very intersting page, there are many offer for you
 
 <img src="images/offers.PNG">
-
+<br>
 
 ### **News:**
 
@@ -44,7 +44,7 @@ There are some blog for you if you will read it and also enjoy it.
 For exmple Try these new dream destinations
 
 <img src="https://github.com/Amanullah21/Travelix-Clone/blob/main/images/news.png">
-
+<br>
 
 ### **contact us:**
 
@@ -52,6 +52,7 @@ About contact uspage
 
 If you have anu query related any think , you conect by these page .
 <img src="images/contact.PNG">
+<br>
 ## Features
 
 * A static clone of Travelix
