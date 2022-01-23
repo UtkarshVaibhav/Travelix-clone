@@ -7,7 +7,7 @@ This repository is for developing the Travelix clone.
 
 # What is Travelix?
 
-Travelix. Home; Flights; Hotels; Car Rental; Taxi; Tour; Cruises; shop; Blog; Discover The World For Less. Save up to 60% on hotels and flights worldwide. For Offline Best Available Fare Whats App Below Scan. CLICK HERE Popular Destinations Need travel inspiration? Check out our most popular destinations. Chennai. Mumbai. Delhi. Hyderabad. Dubai. Sharjah. Abu Dhabi.
+Home, Flights, Hotels, Car Rental, Taxi, Tour, Cruises, shop, Blog, Discover The World For Less. Save up to 60% on hotels and flights worldwide. For Offline Best Available Fare Whats App Below Scan. CLICK HERE Popular Destinations Need travel inspiration? Check out our most popular destinations. Chennai. Mumbai. Delhi. Hyderabad. Dubai. Sharjah. Abu Dhabi.
 
 
 ## Tech Stacks Used:
