@@ -327,12 +327,15 @@ span:hover{
     align-items: center;
 }
 .destination-form .destination-box6>input{
-    width:44%;
-    height: 70%;
-    color: white;
-    font-size: 15px;
-    border-radius: 30px;
-    background-color: rgb(65, 2, 65);
+  width: 160px;
+  height: 55px;
+  color: white;
+  font-size: 15px;
+  border-radius: 30px;
+  background-color: rgb(65, 2, 65);
+  border: none;
+  margin-top: 16px;
+  margin-left: 10px;
 }
 /*--------------------------------- BEST tours ------------------------------------------------------*/
 .best-tours{
@@ -883,7 +886,7 @@ span:hover{
         left: 50%;
         transform: translate(-50%, -50%);
         height: 130px;
-        
+        text-align: center;
     }
     .caption>span{
         font-family: 'Comforter', cursive;
