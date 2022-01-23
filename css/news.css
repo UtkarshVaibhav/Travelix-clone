@@ -221,8 +221,10 @@ padding-bottom: 10px;
 
   /* offer blog page start */
   .main-news-blog-image{
-    background-image: url(../images/blog1.jpeg);
+    /* background-image: url(../images/blog1.jpeg); */
+    background-image: url("https://preview.colorlib.com/theme/travelix/images/blog_background.jpg");
   
+    
     /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"); */
     background-color: #cccccc;
     height: 500px;
