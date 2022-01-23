@@ -19,7 +19,7 @@
             if(scrollTop > lastScrollTop)
             {
                 navbar.style.top="-80px";
-                navbar2.style.top="-20px";
+                navbar2.style.top="-10px";
             }
             else{
                 navbar.style.top="0";
