@@ -49,8 +49,6 @@ For exmple Try these new dream destinations
 
 ### **contact us:**
 
-About contact uspage
-
 If you have anu query related any think , you conect by these page .
 <img src="images/contact.PNG">
 <br>
