@@ -871,12 +871,7 @@ span:hover{
         width: auto;
         height: 100vh;
     }
-    .arrow{
-        display: none;
-    }
-    .number{
-        display: none;
-    }
+    
     .caption{
         color: white;
         font-size: 50px;
