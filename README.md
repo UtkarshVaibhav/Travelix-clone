@@ -70,7 +70,7 @@ If you have anu query related any think , you conect by these page .
 
 - Github: [MD Amanullah](https://github.com/Amanullah21)
 - Linkedin: [MD Amanullah
-](https://www.linkedin.com/mwlite/in/md-amanullah-0239691798)
+](https://www.linkedin.com/mwlite/in/Amanullah21)
 
 
 👤 **Suraj Himanshu**
