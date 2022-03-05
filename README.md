@@ -29,7 +29,7 @@ Discover The World For Less. Save up to 60% on hotels and flights worldwide.
 
 If You will open the about us page, there are given some tour data. WE HAVE THE BEST TOURS FOR YOU.
 
-<img src="images/Abouts-us.PNG">
+<img src="images/Abouts-us1.PNG">
 <br>
 
 ### **Offer:**
